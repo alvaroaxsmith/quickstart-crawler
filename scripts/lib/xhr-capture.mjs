@@ -6,7 +6,7 @@
  */
 
 /** Timeout máximo aguardando a API do iFood responder (ms). */
-const XHR_CAPTURE_MS = 6 _000
+const XHR_CAPTURE_MS = 6_000
 
 /**
  * Navega para pageUrl e aguarda a primeira resposta da API do iFood.
@@ -24,12 +24,12 @@ export async function captureItemXhr(page, pageUrl, navTimeoutMs) {
     const onResponse = async res => {
         const url = res.url()
         if (!url.includes('/restaurant/') || !url.includes('/items/')) return
-        if (capturedJson ? .data ? .menu ? .length > 0) return // já temos dados válidos
+        if (capturedJson ?.data ?.menu ?.length > 0) return // já temos dados válidos
 
         capturedStatus = res.status()
         if (capturedStatus === 200) {
             const j = await res.json().catch(() => null)
-            if (j ? .data ? .menu ? .length > 0) capturedJson = j
+            if (j ?.data ?.menu ?.length > 0) capturedJson = j
         }
         signalReady()
     }

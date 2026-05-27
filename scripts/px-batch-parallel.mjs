@@ -26,7 +26,7 @@ import { parseItemResponse } from '../dist/lib/parser.js'
 import { loadResults, saveResults, mergeAndSave } from '../dist/lib/storage.js'
 import { defaultUrlFiles, readUrlFile } from '../dist/lib/input.js'
 import { hasFlag, getOption } from './lib/cli.mjs'
-import { queueBatchFetch } from './lib/px-solver.mjs'
+import { ensurePxSolved } from './lib/px-solver.mjs'
 import { captureItemXhr } from './lib/xhr-capture.mjs'
 
 const __dirname = dirname(fileURLToPath(
@@ -34,11 +34,11 @@ const __dirname = dirname(fileURLToPath(
 const PROJECT_ROOT = resolve(__dirname, '..')
 
 // ── Config ───────────────────────────────────────────────────────────────────
-const CDP_URL = process.env.CDP_URL ? ? 'http://127.0.0.1:9222'
-const RESULTS_FILE = process.env.RESULTS_FILE ? ? '/tmp/px-batch-results.json'
-const FAILED_FILE = process.env.FAILED_FILE ? ? '/tmp/px-batch-failed.json'
-const ORIGINAL = process.env.ORIGINAL ? ? resolve(PROJECT_ROOT, 'data/products_output.json')
-const OUTPUT_FILE = process.env.OUTPUT_FILE ? ? resolve(PROJECT_ROOT, 'data/products_output_enriched.json')
+const CDP_URL = process.env.CDP_URL ?? 'http://127.0.0.1:9222'
+const RESULTS_FILE = process.env.RESULTS_FILE ?? '/tmp/px-batch-results.json'
+const FAILED_FILE = process.env.FAILED_FILE ?? '/tmp/px-batch-failed.json'
+const ORIGINAL = process.env.ORIGINAL ?? resolve(PROJECT_ROOT, 'data/products_output.json')
+const OUTPUT_FILE = process.env.OUTPUT_FILE ?? resolve(PROJECT_ROOT, 'data/products_output_enriched.json')
 
 // garante que o diretório de saída existe
 mkdirSync(dirname(OUTPUT_FILE), { recursive: true })
@@ -69,30 +69,44 @@ function persistResults() { saveResults(RESULTS_FILE, results) }
  */
 async function processItem(page, item, ids, workerIdx) {
     const { merchantId, itemId } = ids
-    const pageUrl = item.productUrl ? ? item.product_url
+    const pageUrl = item.productUrl ?? item.product_url
     const apiUrl = buildItemApiUrl(merchantId, itemId)
     const log = msg => process.stdout.write(`  [W${workerIdx}][PX] ${msg}\n`)
 
     try {
         // Tentativa inicial: navega e captura XHR
-        let { status, json } = await captureItemXhr(page, pageUrl, 25 _000)
+        let { status, json } = await captureItemXhr(page, pageUrl, 25_000)
 
-        // Se 403 (ou sem resposta): Batch Solver
+        // Se 403 (ou sem resposta): aguarda o mutex PX e faz fetch imediato.
+        // CRÍTICO: o _px3 validado pelo widget tem janela curta antes do reload
+        // da SPA emitir um novo _px3 não-validado. O fetch deve ocorrer em < 2s.
         if (status === 403 || status === null) {
-            const fetchResult = await queueBatchFetch(page, apiUrl, log)
+            const outcome = await ensurePxSolved(page, log)
 
-            if (fetchResult.status === 200) {
-                try {
-                    const parsed = JSON.parse(fetchResult.text)
-                    if (parsed ? .data ? .menu ? .length > 0) json = parsed
-                } catch { /* resposta não era JSON válido */ }
-            }
+            if (outcome === 'solved' || outcome === 'waited') {
+                // Fetch imediato — 400ms apenas para o cookie propagar
+                await new Promise(r => setTimeout(r, 400))
+                const fetchResult = await page.evaluate(async url => {
+                    try {
+                        const r = await fetch(url, { headers: { Accept: 'application/json' } })
+                        const text = await r.text()
+                        return { status: r.status, text }
+                    } catch (e) { return { status: -1, text: String(e) } }
+                }, apiUrl).catch(() => ({ status: -1, text: 'context destroyed' }))
 
-            // Fallback: batch fetch não trouxe dados — re-navega para XHR fresh
-            if (!json) {
-                const fallback = await captureItemXhr(page, pageUrl, 20 _000)
-                json = fallback.json
-                status = fallback.status
+                if (fetchResult.status === 200) {
+                    try {
+                        const parsed = JSON.parse(fetchResult.text)
+                        if (parsed ?.data ?.menu ?.length > 0) json = parsed
+                    } catch { /* resposta não era JSON válido */ }
+                }
+
+                // Fallback via XHR natural — só se não for bloqueio de IP (403)
+                if (!json && fetchResult.status !== 403) {
+                    const fallback = await captureItemXhr(page, pageUrl, 20_000)
+                    json = fallback.json
+                    status = fallback.status
+                }
             }
         }
 
@@ -135,7 +149,7 @@ async function runQueue(pages, queue, label) {
                 const item = queue.shift()
                 if (!item) break
 
-                const ids = parseProductUrl(item.productUrl ? ? item.product_url)
+                const ids = parseProductUrl(item.productUrl ?? item.product_url)
                 if (!ids) {
                     failCount++;
                     done++;
@@ -153,16 +167,16 @@ async function runQueue(pages, queue, label) {
                         itemId: result.itemId,
                         normalPrice: result.normalPrice,
                         discountPrice: result.discountPrice,
-                        title: result.title ? ? null,
-                        logoUrl: result.logoUrl ? ? null,
+                        title: result.title ?? null,
+                        logoUrl: result.logoUrl ?? null,
                     }
                     successCount++
-                    const lbl = (item.name ? ? ids.itemId ? ? '').slice(0, 32).padEnd(32)
+                    const lbl = (item.name ?? ids.itemId ?? '').slice(0, 32).padEnd(32)
                     console.log(`[W${workerIdx}][${label} ${done}/${total}] ✅ ${lbl} | R$ ${Number(result.normalPrice).toFixed(2)}`)
                     persistResults()
                 } else {
                     failCount++
-                    const lbl = (item.name ? ? ids.itemId ? ? '').slice(0, 32).padEnd(32)
+                    const lbl = (item.name ?? ids.itemId ?? '').slice(0, 32).padEnd(32)
                     console.log(`[W${workerIdx}][${label} ${done}/${total}] ❌ ${lbl} | ${result.reason}`)
                     failed.push(item)
                 }
@@ -188,8 +202,8 @@ async function runQueue(pages, queue, label) {
 async function warmUp(ctx) {
     const page = await ctx.newPage()
     process.stdout.write('[batch] Warm-up iFood home...\n')
-    await page.goto('https://www.ifood.com.br/', { waitUntil: 'domcontentloaded', timeout: 25 _000 }).catch(() => {})
-    await page.waitForLoadState('networkidle', { timeout: 12 _000 }).catch(() => {})
+    await page.goto('https://www.ifood.com.br/', { waitUntil: 'domcontentloaded', timeout: 25_000 }).catch(() => {})
+    await page.waitForLoadState('networkidle', { timeout: 12_000 }).catch(() => {})
     const cookies = await ctx.cookies('https://www.ifood.com.br')
     const cf = cookies.find(c => c.name === 'cf_clearance')
     const px3 = cookies.find(c => c.name === '_px3')
@@ -213,7 +227,7 @@ if (RETRY_ONLY) {
 } else {
     const alreadyDone = new Set(Object.keys(results))
     pendingItems = allItems.filter(item => {
-        const ids = parseProductUrl(item.productUrl ? ? item.product_url)
+        const ids = parseProductUrl(item.productUrl ?? item.product_url)
         if (!ids) return false
         return !alreadyDone.has(`${ids.merchantId}:${ids.itemId}`)
     })
@@ -228,7 +242,7 @@ if (pendingItems.length === 0) {
 }
 
 const browser = await chromium.connectOverCDP(CDP_URL)
-const ctx = browser.contexts()[0] ? ? await browser.newContext()
+const ctx = browser.contexts()[0] ?? await browser.newContext()
 
 await warmUp(ctx)
 
@@ -243,7 +257,7 @@ const failed1 = await runQueue(pages, [...pendingItems], 'rodada-1')
 let failed2 = []
 if (failed1.length > 0) {
     console.log(`\n[batch] Retry automático: ${failed1.length} itens que falharam...`)
-    await pages[0].waitForTimeout(6 _000) // pausa para o PX relaxar entre rodadas
+    await pages[0].waitForTimeout(6_000) // pausa para o PX relaxar entre rodadas
     failed2 = await runQueue(pages, [...failed1], 'retry')
 }
 

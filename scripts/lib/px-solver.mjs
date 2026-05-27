@@ -1,82 +1,48 @@
 /**
- * px-solver.mjs — Batch PX Solver
+ * px-solver.mjs — PX Mutex Solver
  *
- * Gerencia o estado compartilhado do solve de desafios PX HUMAN Security.
- * Quando múltiplos workers recebem 403 simultaneamente:
- *   1. O primeiro worker torna-se o solver (aguarda 60ms para coletar outros).
- *   2. Após o solve, TODAS as URLs são buscadas em paralelo NA ABA DO SOLVER,
- *      antes que o reload da SPA invalide o _px3 recém-validado.
- *   3. Cada worker recebe seu fetchResult diretamente — sem re-navegar.
- * Resultado: 1 solve por ciclo, independentemente do número de workers.
+ * Mutex simples: apenas UM worker resolve o challenge por vez.
+ * Os outros aguardam o mesmo Promise e recebem 'waited' — em seguida
+ * fazem fetch imediato na SUA própria aba, aproveitando o _px3 fresco
+ * que o cookie compartilhado propagou para todos os contextos.
+ *
+ * CRÍTICO: o _px3 validado pelo widget tem janela curta (< 2s) antes do
+ * reload da SPA emitir um novo _px3 não-validado. Por isso o fetch deve
+ * acontecer IMEDIATAMENTE após o solve — sem cooldown entre solve e fetch.
  */
 
 import { solvePxChallengeIfPresent } from '../../dist/adapters/fetcher/turnstile.service.js'
 
-/** @type {Array<{ apiUrl: string, resolve: (r: {status: number, text: string}) => void }>} */
-const pxQueue = []
-let pxSolving = false
+let _pxSolvePromise = null
 
 /**
- * Enfileira a URL do worker e aguarda o resultado do batch solve.
- * @param {import('playwright').Page} solvingPage
- * @param {string} apiUrl
+ * Garante que o challenge PX esteja resolvido antes de tentar o fetch.
+ * Se outro worker já está resolvendo, aguarda ele terminar ('waited').
+ * Retorna o mesmo valor de `solvePxChallengeIfPresent`: 'solved' | 'waited' | 'absent' | 'failed'.
+ *
+ * @param {import('playwright').Page} page
  * @param {(msg: string) => void} log
- * @returns {Promise<{ status: number, text: string }>}
+ * @returns {Promise<'solved'|'waited'|'absent'|'failed'>}
  */
-export function queueBatchFetch(solvingPage, apiUrl, log) {
-    return new Promise(resolve => {
-        pxQueue.push({ apiUrl, resolve })
-        if (pxSolving) {
-            log('PX: aguardando batch solve em andamento...')
-            return
-        }
-        pxSolving = true
-            // Janela de 60ms para agrupar workers simultâneos antes de iniciar o solve
-        setTimeout(() => doBatchSolve(solvingPage, log), 60)
-    })
-}
+export async function ensurePxSolved(page, log) {
+    if (_pxSolvePromise) {
+        log('PX: outro worker resolvendo — aguardando...')
+        await _pxSolvePromise
+        log('PX: solve concluído, tentando fetch com _px3 atualizado')
+        return 'waited'
+    }
 
-async function doBatchSolve(page, log) {
+    let _resolve
+    _pxSolvePromise = new Promise(r => { _resolve = r })
     try {
-        const outcome = await solvePxChallengeIfPresent(page, {
-            detectTimeoutMs: 8 _000,
-            holdMs: 12 _000,
-            resolveTimeoutMs: 22 _000,
+        return await solvePxChallengeIfPresent(page, {
+            detectTimeoutMs: 8_000,
+            holdMs: 15_000,
+            resolveTimeoutMs: 22_000,
             log,
         })
-
-        const batch = pxQueue.splice(0)
-
-        if (outcome === 'solved' && batch.length > 0) {
-            const count = batch.length
-            log(`PX: batch fetch de ${count} URL${count > 1 ? 's' : ''} simultâneas`)
-
-            // Dispara TODOS os fetches da aba do solver ANTES do reload invalidar _px3
-            const urls = batch.map(b => b.apiUrl)
-            const fetched = await page
-                .evaluate(async urls => {
-                    return Promise.all(urls.map(async url => {
-                        try {
-                            const r = await fetch(url, { headers: { Accept: 'application/json' } })
-                            const text = await r.text()
-                            return { status: r.status, text }
-                        } catch (e) {
-                            return { status: -1, text: String(e) }
-                        }
-                    }))
-                }, urls)
-                .catch(() => urls.map(() => ({ status: -1, text: 'context destroyed' })))
-
-            batch.forEach((item, i) => item.resolve(fetched[i]))
-        } else {
-            // Sem challenge ativo ou solve falhou — workers farão fallback por conta própria
-            batch.forEach(item => item.resolve({ status: -1, text: 'no-challenge' }))
-        }
-    } catch (err) {
-        pxQueue
-            .splice(0)
-            .forEach(item => item.resolve({ status: -1, text: `solve-error:${String(err).slice(0, 50)}` }))
     } finally {
-        pxSolving = false
+        _pxSolvePromise = null
+        _resolve()
     }
 }

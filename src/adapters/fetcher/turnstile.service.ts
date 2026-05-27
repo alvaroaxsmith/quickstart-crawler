@@ -146,7 +146,9 @@ export async function solveTurnstileIfPresent(
   // (1) Checkbox: clique curto a ~30px da borda esquerda, com trajetoria
   // humana (Bezier) via ghost-cursor — evita assinatura mecanica de
   // page.mouse.move linear que o CF Bot Management detecta.
-  log(`tentativa 1 (checkbox): clique humanizado em (${checkboxX.toFixed(0)}, ${checkboxY.toFixed(0)})`)
+  log(
+    `tentativa 1 (checkbox): clique humanizado em (${checkboxX.toFixed(0)}, ${checkboxY.toFixed(0)})`,
+  )
   const cursor = await createCursor(page, { debug: false })
   // Movimento aleatorio antes (humano explora a pagina).
   try {
@@ -165,7 +167,9 @@ export async function solveTurnstileIfPresent(
 
   // (2) Press-and-hold: trajetoria humanizada ate o centro, depois
   // mouse.down/up manual com jitter (ghost-cursor nao expoe hold).
-  log(`tentativa 2 (press-and-hold): hold ${holdMs}ms em (${centerX.toFixed(0)}, ${centerY.toFixed(0)})`)
+  log(
+    `tentativa 2 (press-and-hold): hold ${holdMs}ms em (${centerX.toFixed(0)}, ${centerY.toFixed(0)})`,
+  )
   await cursor.actions.move({ x: centerX, y: centerY }, { waitBeforeMove: [120, 280] })
   await page.waitForTimeout(180 + Math.random() * 120)
   await page.mouse.down()
@@ -213,9 +217,7 @@ export interface SolvePxChallengeOptions {
 }
 
 // Encontra o locator do botão PX em qualquer frame about:blank.
-async function findPxLocator(
-  page: Page,
-): Promise<import('playwright').Locator | null> {
+async function findPxLocator(page: Page): Promise<import('playwright').Locator | null> {
   for (const frame of page.frames()) {
     if (frame.url() !== 'about:blank') continue
     try {
@@ -224,7 +226,10 @@ async function findPxLocator(
       )
       const count = await btn.count()
       if (count === 0) continue
-      const visible = await btn.first().isVisible().catch(() => false)
+      const visible = await btn
+        .first()
+        .isVisible()
+        .catch(() => false)
       if (!visible) continue
       return btn.first()
     } catch {
@@ -242,7 +247,12 @@ async function hasPxRetryMessage(page: Page): Promise<boolean> {
     if (frame.url() !== 'about:blank') continue
     try {
       const found = await frame.evaluate(() => {
-        const RETRY_TEXTS = ['tente outra vez', 'try again', 'tente novamente', 'pressione novamente']
+        const RETRY_TEXTS = [
+          'tente outra vez',
+          'try again',
+          'tente novamente',
+          'pressione novamente',
+        ]
         for (const el of document.querySelectorAll('*')) {
           const t = (el.textContent ?? '').toLowerCase().trim()
           if (el.children.length === 0 && RETRY_TEXTS.some((s) => t.includes(s))) return true
@@ -277,38 +287,73 @@ async function naturalApproach(page: Page, targetX: number, targetY: number): Pr
   await page.waitForTimeout(350 + Math.random() * 450)
 }
 
-// Simula hold fisiológico: respiração + batimento cardíaco + tremor + micro-ajustes.
-// O PX analisa os eventos mousemove durante o hold — um jitter uniforme é detectado.
-async function physiologicalHold(
+// Hold ADAPTATIVO: solta no momento exato em que o botao PX e removido.
+//
+// Comportamento da "catraca" PX: o botao "Pressione e segure" tem um threshold
+// interno (~6-10s); quando atingido, o PX remove o botao do DOM. Em vez de
+// chutar um tempo fixo, polamos o botao a partir do min-hold e soltamos
+// imediatamente quando ele sumir — replicando a reacao humana ao feedback
+// visual do widget (a borda completa, o usuario solta).
+//
+// Tambem: humano fica QUIETO durante o "segure". Movimentos densos/ritmicos
+// (senoidais ou em cadencia fixa) sao detectados via FFT/autocorrelacao.
+async function adaptiveHold(
   page: Page,
   cx: number,
   cy: number,
-  duration: number,
-): Promise<void> {
-  const breathPeriodS = 4 + Math.random() * 2
-  const breathAmpX = 1.2 + Math.random() * 1.8
-  const breathAmpY = 0.8 + Math.random() * 1.2
-  const heartPeriodS = 0.7 + Math.random() * 0.25
-  let elapsed = 0
-  let nextAdjust = 2_500 + Math.random() * 2_500
-  let adjustOffX = 0
-  let adjustOffY = 0
-  while (elapsed < duration) {
-    const t = elapsed / 1000
-    const bx = Math.sin((2 * Math.PI * t) / breathPeriodS) * breathAmpX
-    const by = Math.cos((2 * Math.PI * t) / breathPeriodS) * breathAmpY
-    const hx = Math.sin((2 * Math.PI * t) / heartPeriodS) * 0.22
-    const tx = (Math.random() - 0.5) * 0.7
-    const ty = (Math.random() - 0.5) * 0.7
-    if (elapsed >= nextAdjust) {
-      adjustOffX = Math.max(-3, Math.min(3, adjustOffX + (Math.random() - 0.5) * 2.5))
-      adjustOffY = Math.max(-3, Math.min(3, adjustOffY + (Math.random() - 0.5) * 2.5))
-      nextAdjust += 3_000 + Math.random() * 2_500
+  minHoldMs: number,
+  maxHoldMs: number,
+  log: (msg: string) => void,
+): Promise<{ heldMs: number; releasedByButtonGone: boolean }> {
+  const start = Date.now()
+  // Quietude inicial (~500ms): tempo de reacao humano ao "pressione e segure".
+  await page.waitForTimeout(450 + Math.random() * 200)
+
+  let curX = cx
+  let curY = cy
+  let lastMoveAt = Date.now()
+  let lastPollAt = 0
+  const POLL_INTERVAL_MS = 200
+
+  while (Date.now() - start < maxHoldMs) {
+    const elapsed = Date.now() - start
+
+    // Apos o min-hold, polla se o botao foi removido (threshold atingido).
+    if (elapsed >= minHoldMs && Date.now() - lastPollAt >= POLL_INTERVAL_MS) {
+      lastPollAt = Date.now()
+      const stillThere = await findPxLocator(page)
+      if (!stillThere) {
+        log(`PX: botao removido durante hold (${elapsed}ms) — release adaptativo`)
+        return { heldMs: elapsed, releasedByButtonGone: true }
+      }
     }
-    await page.mouse.move(cx + bx + hx + tx + adjustOffX, cy + by + ty + adjustOffY)
-    const tick = 55 + Math.random() * 65
-    await page.waitForTimeout(tick)
-    elapsed += tick
+
+    // Drift leve e nao-periodico (a cada 700-1300ms), <=3px do centro.
+    if (Date.now() - lastMoveAt > 700 + Math.random() * 600) {
+      const dx = (Math.random() - 0.5) * 2.4
+      const dy = (Math.random() - 0.5) * 2.4
+      curX = Math.max(cx - 3, Math.min(cx + 3, curX + dx))
+      curY = Math.max(cy - 3, Math.min(cy + 3, curY + dy))
+      await page.mouse.move(curX, curY, { steps: 2 })
+      lastMoveAt = Date.now()
+    }
+
+    await page.waitForTimeout(120 + Math.random() * 80)
+  }
+
+  return { heldMs: Date.now() - start, releasedByButtonGone: false }
+}
+
+// Le o valor atual do cookie _px3 do contexto (necessario para validar solve).
+async function getPx3Cookie(page: Page): Promise<string | null> {
+  try {
+    const cookies = await page
+      .context()
+      .cookies(['https://www.ifood.com.br', 'https://ifood.com.br'])
+    const c = cookies.find((c) => c.name === '_px3')
+    return c?.value ?? null
+  } catch {
+    return null
   }
 }
 
@@ -363,7 +408,9 @@ export async function solvePxChallengeIfPresent(
     const bcx = absBox.x + absBox.width / 2
     const bcy = absBox.y + absBox.height / 2
 
-    log(`PX challenge: hold ${holdMs}ms em (${bcx.toFixed(0)}, ${bcy.toFixed(0)}) [tentativa ${attempt + 1}/${MAX_ATTEMPTS}]`)
+    log(
+      `PX challenge: hold adaptativo min=6s max=${holdMs}ms em (${bcx.toFixed(0)}, ${bcy.toFixed(0)}) [tentativa ${attempt + 1}/${MAX_ATTEMPTS}]`,
+    )
 
     // Abordagem humana ao botão
     await naturalApproach(page, bcx, bcy)
@@ -377,13 +424,20 @@ export async function solvePxChallengeIfPresent(
 
     await page.mouse.down()
 
-    // Hold com simulação fisiológica (respiração + batimento + tremor)
-    await physiologicalHold(page, bcx, bcy, holdMs)
+    // Hold adaptativo: polla o botao e solta no momento exato em que ele sumir.
+    // min-hold 6s evita rejeicao por hold curto; max = holdMs (default 15s).
+    const { heldMs, releasedByButtonGone } = await adaptiveHold(page, bcx, bcy, 6_000, holdMs, log)
 
+    // Pequena quietude antes do release (humano relaxa antes de soltar).
+    await page.waitForTimeout(120 + Math.random() * 180)
     await page.mouse.up()
-    log('PX: mouse.up')
+    log(
+      `PX: mouse.up apos ${heldMs}ms (${releasedByButtonGone ? 'botao removido' : 'max-hold atingido'})`,
+    )
 
-    // Aguarda o modal sumir, "tente outra vez", ou timeout
+    // Aguarda o modal sumir, "tente outra vez", ou timeout.
+    // Como o release foi acionado pelo desaparecimento do botao, "modal removido"
+    // agora e sinal confiavel de solve.
     const resolveDeadline = Date.now() + resolveTimeoutMs
     let gotRetryMsg = false
     while (Date.now() < resolveDeadline) {
@@ -397,12 +451,12 @@ export async function solvePxChallengeIfPresent(
 
       const pxModal = page.frames().find((f) => f.name() === 'px-captcha-modal')
       if (!pxModal) {
-        log('PX: resolvido (frame px-captcha-modal removido)')
+        log('PX: resolvido (modal px-captcha-modal removido)')
         return 'solved'
       }
       const still = await findPxLocator(page)
       if (!still) {
-        log('PX: resolvido (botão removido)')
+        log('PX: resolvido (botao removido pos mouse.up)')
         return 'solved'
       }
     }
@@ -410,6 +464,6 @@ export async function solvePxChallengeIfPresent(
     if (!gotRetryMsg) break
   }
 
-  log('PX: modal ainda presente após todas as tentativas')
+  log('PX: modal ainda presente apos todas as tentativas')
   return 'failed'
 }
