@@ -1,0 +1,53 @@
+# ── Dependencies ──────────────────────────────────────────────────────────────
+node_modules/
+
+# ── Build output ──────────────────────────────────────────────────────────────
+dist/
+
+# ── Environment / Secrets ─────────────────────────────────────────────────────
+.env
+.env.bak
+# .env.example is committed intentionally
+
+# ── Runtime data (gerado pelo crawler) ────────────────────────────────────────
+# Arquivos de grupo — auto-gerados por run-all.mjs a partir de products_output.json
+data/groups/
+# Cache de execução parcial
+data/px-batch-results.json
+
+# ── Logs / Relatórios (gerados a cada corrida) ────────────────────────────────
+docs/evidence/
+*.log
+pino*.json
+
+# ── Screenshots de smoke/debug ────────────────────────────────────────────────
+out/
+
+# ── Browser profile (cookies, sessão, cache — ~200 MB) ────────────────────────
+fixtures/browser-profile/
+fixtures/storage-state.json
+
+# ── Fixtures brutas (reproduzíveis via scripts) ────────────────────────────────
+fixtures/captures/
+fixtures/probes/
+
+# ── DB / checkpoints ──────────────────────────────────────────────────────────
+*.db
+*.sqlite
+checkpoint-*.json
+output/
+
+# ── Tests ─────────────────────────────────────────────────────────────────────
+coverage/
+
+# ── Editor ────────────────────────────────────────────────────────────────────
+.vscode/settings.json
+.idea/
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+case.md
+input

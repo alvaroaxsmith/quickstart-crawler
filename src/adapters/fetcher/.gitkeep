@@ -1,0 +1,4 @@
+# Crawler adapters (port: PageFetcher)
+# Implementações desta camada são responsáveis APENAS por obter o conteúdo bruto
+# (HTML + resposta JSON da API interceptada) — sem parsing, sem persistência.
+# Próximas tasks: B2 (BrowserPool), B3 (PlaywrightFetcher).

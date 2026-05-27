@@ -1,0 +1,4 @@
+# Scripts de runtime — não formatar automaticamente.
+# Os arquivos .mjs usam operadores ?? e ?. que formatadores mais antigos
+# ou o built-in do VS Code podem corromper adicionando espaços indevidos.
+scripts/

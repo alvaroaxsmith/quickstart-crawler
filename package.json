@@ -1,0 +1,55 @@
+{
+    "name": "ifood-product-crawler",
+    "version": "0.1.0",
+    "description": "CLI crawler de produtos iFood com interceptação de API interna",
+    "type": "module",
+    "main": "dist/cli/index.js",
+    "scripts": {
+        "setup": "npm install && npm run build",
+        "chrome": "'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --remote-debugging-port=9222 --user-data-dir=\"$PWD/fixtures/browser-profile\" --no-first-run --no-default-browser-check",
+        "precrawl": "perl -i -pe 's/\\? \\?/??/g; s/\\? \\./?./g; s/(\\d) _(\\d{3})/$1_$2/g' scripts/*.mjs scripts/lib/*.mjs 2>/dev/null || true",
+        "crawl": "node scripts/run-all.mjs",
+        "precrawl:reset": "npm run precrawl",
+        "crawl:reset": "node scripts/run-all.mjs --reset",
+        "precrawl:pao": "npm run precrawl",
+        "crawl:pao": "node scripts/px-batch-parallel.mjs --group pao --concurrency 3 2>&1 | tee docs/evidence/batch-pao.log",
+        "precrawl:carrefour": "npm run precrawl",
+        "crawl:carrefour": "node scripts/px-batch-parallel.mjs --group carrefour --concurrency 3 2>&1 | tee docs/evidence/batch-carrefour.log",
+        "precrawl:farmacia": "npm run precrawl",
+        "crawl:farmacia": "node scripts/px-batch-parallel.mjs --group farmacia --concurrency 3 2>&1 | tee docs/evidence/batch-farmacia.log",
+        "precrawl:retry": "npm run precrawl",
+        "crawl:retry": "node scripts/px-batch-parallel.mjs --group all --retry-only",
+        "report": "node scripts/generate-report.mjs",
+        "build": "tsc",
+        "dev": "tsx --env-file=.env src/cli/index.ts",
+        "start": "node --env-file=.env dist/cli/index.js",
+        "test": "vitest run",
+        "test:unit": "vitest run tests/unit",
+        "test:coverage": "vitest run --coverage",
+        "lint": "eslint src tests --ext .ts",
+        "lint:fix": "eslint src tests --ext .ts --fix",
+        "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\""
+    },
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "dependencies": {
+        "exceljs": "^4.4.0",
+        "ghost-cursor-playwright": "^2.1.0",
+        "patchright": "^1.60.0",
+        "playwright": "^1.44.0",
+        "playwright-extra": "^4.3.6",
+        "puppeteer-extra-plugin-stealth": "^2.11.2"
+    },
+    "devDependencies": {
+        "@types/node": "^22.0.0",
+        "@typescript-eslint/eslint-plugin": "^8.0.0",
+        "@typescript-eslint/parser": "^8.0.0",
+        "@vitest/coverage-v8": "^2.0.0",
+        "eslint": "^8.57.0",
+        "prettier": "^3.0.0",
+        "tsx": "^4.0.0",
+        "typescript": "^5.4.0",
+        "vitest": "^2.0.0"
+    }
+}
