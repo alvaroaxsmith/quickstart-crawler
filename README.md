@@ -63,8 +63,8 @@ npm run crawl -- --group pao
 npm run crawl -- --group carrefour
 npm run crawl -- --group farmacia
 
-# Ajustar concorrência (default: 5 workers)
-npm run crawl -- --concurrency 5
+# Ajustar concorrência (default: 3 workers)
+npm run crawl -- --concurrency 3
 
 # Re-tentar apenas os itens que falharam
 npm run crawl:retry
@@ -158,28 +158,46 @@ npm run crawl:reset
 
 O iFood usa duas camadas de proteção:
 
-| Camada | Tecnologia | Cookie |
-|---|---|---|
-| TLS Fingerprinting | Cloudflare | `cf_clearance` |
-| Bot Detection | PX HUMAN Security | `_px3` |
+| Camada | Tecnologia | Cookie | Validade |
+|---|---|---|---|
+| TLS Fingerprinting | Cloudflare | `cf_clearance` | ~30 min |
+| Bot Detection | PX HUMAN Security | `_px3` | ~2s pós-solve |
 
 **Fluxo por produto:**
 
 ```
 1. Worker navega para a URL do produto (page.goto)
-2. React dispara XHR para /site-api/v1/merchants/.../items/...
+2. React SPA dispara XHR para /site-api/v1/merchants/.../items/...
 3. page.on('response') intercepta a resposta JSON → extrai preço
-4. Se 403 (PX bloqueio) — Batch Solver:
-   └── 1º worker vira solver; demais registram sua URL na fila (janela 60ms)
-   └── Solver executa "press and hold" ~12s
-   └── Todas as URLs da fila são buscadas em paralelo NA ABA DO SOLVER,
-       antes do reload da SPA invalidar o _px3 recém-validado
-   └── Cada worker recebe seu resultado sem re-navegar
-   └── Fallback: se o batch falhar, o worker re-navega para XHR fresh
-5. Salva resultado no cache incremental (/tmp/px-batch-results.json)
+4. Se status=200 com dados → salva e avança
+5. Se status=403 (PX challenge) — PX Mutex Solver:
+   └── 1º worker adquire mutex e executa hold adaptativo (6–15s no botão)
+   └── Widget aceita o gesto → botão removido do DOM → mouse.up liberado
+   └── _px3 validado é propagado para TODOS os contextos do Chrome
+   └── ATENÇÃO: a SPA recarrega a página após o solve (comportamento esperado)
+   └── Demais workers aguardam o mutex e recebem 'waited'
+   └── Após solve: cada worker faz fetch imediato NA SUA PRÓPRIA ABA (400ms)
+   └── O fetch DEVE ocorrer nessa janela de ~2s — após o reload da SPA,
+       um novo _px3 não-validado é emitido e o fetch volta a retornar 403
+6. Salva resultado no cache incremental (/tmp/px-batch-results.json)
 ```
 
-> **Por que batch e não fetch individual por worker?** Após o solve, o SPA recarrega a página e emite um novo `_px3` inválido — sobrescrevendo o cookie válido para _todas_ as abas. Fazer os fetches em batch na aba do solver (antes do reload) é a única janela válida.
+> **Por que o fetch é imediato por worker (não em batch na aba do solver)?**
+> O cookie `_px3` é compartilhado entre todos os contextos do Chrome. Após o solve,
+> cada worker faz `page.evaluate(fetch)` na sua própria aba aproveitando o `_px3`
+> recém-validado. O único requisito é que isso ocorra **antes** do reload da SPA
+> (~2s), que emite um novo `_px3` não-validado e invalidaria a janela.
+
+> **Por que a página recarrega após o solve?** É comportamento normal da SPA do iFood
+> — o widget PX faz `window.location.reload()` internamente ao validar o gesto.
+> Isso é esperado e não indica falha no solve.
+
+> **Por que IPs "queimados" falham mesmo com solve correto?**
+> O PerimeterX mantém reputação de IP em nível de rede. Um IP flagrado (por
+> excesso de requisições ou padrão de bot) recebe 403 no fetch da API mesmo
+> com `_px3` válido. A solução é usar IP residencial limpo (hotspot, proxy
+> residencial) — o mesmo solve que retorna 403 num IP queimado retorna 200
+> num IP limpo.
 
 **Retry automático:** ao final de cada grupo, itens com falha são re-enfileirados em rodada-2.
 
@@ -202,7 +220,7 @@ FAILED_FILE=/tmp/px-batch-failed.json
 FLARESOLVERR_URL=http://localhost:8191/v1
 ```
 
-A concorrência padrão é **5 workers**. O Batch PX Solver garante que 1 solve serve todos os workers simultaneamente — aumentar além de 5 tem retorno decrescente.
+A concorrência padrão é **3 workers** (recomendado). O Mutex Solver garante que 1 solve serve todos os workers simultaneamente via cookie compartilhado — aumentar além de 5 tem retorno decrescente e aumenta a pressão sobre o IP.
 
 ---
 
@@ -296,12 +314,13 @@ npm run crawl:retry
 
 ## Limitações Conhecidas
 
-1. **Requer Chrome headful local** — Cookies vinculados ao fingerprint TLS. Não funciona em Docker headless.
-2. **Throughput limitado pelo PX solve** — ~12s por solve. Com o Batch Solver, 1 solve serve todos os workers simultaneamente: com 5 workers, ~15–25 itens/minuto em batches de 403.
-3. **Chrome headful single-instance** — O solve PX usa `page.mouse` (CDP virtual, não mouse físico), mas exige Chrome visível (não headless). Rodar duas instâncias simultâneas no mesmo perfil causa conflito de cookies.
-4. **Sessão expira (~30 min)** — Se `cf_clearance` expirar: com FlareSolverr em execução, é renovado automaticamente (`npm run cf:renew` ou etapa 4.5 do pipeline). Sem FlareSolverr: reabra Chrome com `npm run chrome`.
-5. **Cobertura por endereço-âncora** — Lojas fora da área de entrega do endereço setado no profile não retornam preço (categorizadas como `UNAVAILABLE` no output).
-6. **`image_url` é `null` no dataset atual** — A API interna do iFood bloqueia (403) chamadas diretas mesmo com `cf_clearance` válido: ela exige tokens de autorização injetados pelo SPA React. O campo `logoUrl` é extraído e persistido pelo pipeline em novas execuções (via `page.on('response')`), mas não é recuperável do cache sem re-crawl completo das 641 URLs bem-sucedidas.
+1. **Requer Chrome headful local** — Cookies vinculados ao fingerprint TLS do Chrome. Não funciona em Docker headless (Chromium open-source tem fingerprint diferente e é detectado pelo Cloudflare).
+2. **Throughput limitado pelo PX solve** — ~6–15s por solve (hold adaptativo). Com 3 workers e IP limpo: ~9–15 itens/minuto. Cada ciclo de solve serve todos os workers em paralelo via cookie compartilhado.
+3. **Sensível à reputação do IP** — IPs queimados (flagrados pelo PerimeterX por abuso anterior) retornam 403 mesmo após solve correto. Use IP residencial limpo: hotspot móvel ou proxy residencial rotativo. Sintoma: solve funciona (botão removido) mas todos os fetches retornam 403.
+4. **Chrome headful single-instance** — O solve PX usa `page.mouse` via CDP (não mouse físico). Exige Chrome visível (não headless). Rodar duas instâncias com o mesmo profile causa conflito de cookies.
+5. **Sessão expira (~30 min)** — Se `cf_clearance` expirar: com FlareSolverr em execução, renovado automaticamente. Sem FlareSolverr: reabra Chrome com `npm run chrome` e navegue para https://www.ifood.com.br.
+6. **Cobertura por endereço-âncora** — Lojas fora da área de entrega do endereço setado no profile retornam 200 sem dados de preço (categorizadas como `UNAVAILABLE`).
+7. **`image_url` é `null` no dataset atual** — A API interna exige tokens de autorização injetados pela SPA. O campo é extraído em novas execuções via `page.on('response')`, mas não é recuperável retroativamente do cache.
 
 ---
 
@@ -349,6 +368,38 @@ Verifique se a porta 9222 está acessível: `curl http://127.0.0.1:9222/json/ver
 
 ---
 
+**Solve funciona (botão removido) mas 100% dos fetches retornam 403**
+
+O IP está queimado — o PerimeterX bloqueou o IP em nível de rede. O gesto é aceito pelo widget (comportamento correto) mas o backend rejeita as requisições independente do `_px3`.
+
+```
+Sintoma no log:
+  [W1][PX] PX: botao removido durante hold (6400ms)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][rodada-1 3/215] ❌  | status=403   ← mesmo após solve
+```
+
+**Solução:** troque o IP.
+```bash
+# 1. Conecte o Mac ao hotspot do celular (ou ative proxy residencial)
+# 2. Encerre o Chrome para limpar conexões TCP abertas
+pkill -f "Google Chrome"
+# 3. Reinicie o Chrome no novo IP
+npm run chrome
+# 4. Rode o crawl do zero
+npm run crawl:reset
+```
+
+> **Por que trocar o IP resolve?** O PerimeterX avalia a reputação do IP independentemente do cookie. Um IP residencial limpo (celular 4G/5G, por exemplo) não tem histórico de abuso e o `_px3` validado é aceito normalmente.
+
+---
+
+**A página recarrega após o solve — isso é normal?**
+
+Sim. A SPA do iFood executa `window.location.reload()` internamente ao validar o widget PX. Isso é comportamento esperado e não indica falha. O importante é que o fetch da API ocorra **antes** desse reload (~400ms após o solve), enquanto o `_px3` validado ainda está ativo. Após o reload, a SPA emite um novo `_px3` não-validado e o ciclo de challenge começa novamente para o próximo item.
+
+---
+
 ## Melhorias Futuras
 
 - **CAPTCHA solver pago como fallback automático** — integrar [CapSolver](https://capsolver.com) ou [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) (ADRs [0009](docs/adr/0009-capsolver-cloudflare-challenge.md) e [0010](docs/adr/0010-flaresolverr-free-alternative.md)) para remover dependência do solve manual via mouse físico e permitir paralelismo real entre máquinas.
@@ -384,7 +435,7 @@ scripts/
     logger.mjs              ← createLogger (info/warn/error/header)
     process.mjs             ← run(cmd, args) — spawn com log em arquivo
     groups.mjs              ← slugToGroup + splitIntoGroups
-    px-solver.mjs           ← Batch PX Solver (queueBatchFetch)
+    px-solver.mjs           ← PX Mutex Solver (ensurePxSolved)
     xhr-capture.mjs         ← captureItemXhr (intercepção XHR do iFood)
 
 data/
