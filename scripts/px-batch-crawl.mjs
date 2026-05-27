@@ -21,10 +21,10 @@ import { mkdirSync } from 'fs'
 import { fileURLToPath } from 'url'
 import { dirname, resolve } from 'path'
 import { solvePxChallengeIfPresent } from '../dist/adapters/fetcher/turnstile.service.js'
-import { buildItemApiUrl } from './lib/urls.mjs'
-import { defaultUrlFiles, loadItems } from './lib/input.mjs'
-import { loadResults, saveResults, mergeAndSave } from './lib/storage.mjs'
-import { parseItemResponse } from './lib/parser.mjs'
+import { buildItemApiUrl } from '../dist/lib/urls.js'
+import { defaultUrlFiles, loadItems } from '../dist/lib/input.js'
+import { loadResults, saveResults, mergeAndSave } from '../dist/lib/storage.js'
+import { parseItemResponse } from '../dist/lib/parser.js'
 
 const __dirname = dirname(fileURLToPath(
     import.meta.url))
@@ -200,10 +200,11 @@ for (const [i, item] of items.entries()) {
     const normalPrice = priceData ?.normalPrice ?? null
     const discountPrice = priceData ?.discountPrice ?? null
     const title = priceData ?.title ?? null
+    const logoUrl = priceData ?.logoUrl ?? null
 
     const label = (item.name ?? item.itemId ?? '?').toString().slice(0, 35).padEnd(35)
     if (normalPrice !== null) {
-        results[key] = { merchantId: item.merchantId, itemId: item.itemId, normalPrice, discountPrice, title }
+        results[key] = { merchantId: item.merchantId, itemId: item.itemId, normalPrice, discountPrice, title, logoUrl }
         successCount++
         console.log(`[${i+1}/${items.length}] ✅ ${label} | R$ ${Number(normalPrice).toFixed(2)}`)
         saveResults(RESULTS_FILE, results)

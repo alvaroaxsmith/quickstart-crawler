@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-27T07:01:41.964Z",
+  "generated_at": "2026-05-27T15:27:35.444Z",
   "source_file": "/Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json",
   "execution_time": {
     "by_group": {
@@ -70,7 +70,8 @@
     }
   },
   "error_breakdown": {
-    "Preço não encontrado": 358
+    "UNAVAILABLE: produto indisponível (fora da área de entrega ou bloqueio temporário)": 305,
+    "DEACTIVATED: loja desativada no iFood (URL inativa)": 53
   },
   "sample_discounted": []
 }

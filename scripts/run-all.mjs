@@ -40,7 +40,7 @@ const args = process.argv.slice(2)
 const RESET = args.includes('--reset')
 const specificGroup = args.indexOf('--group') >= 0 ? args[args.indexOf('--group') + 1] : null
 const concurrencyIdx = args.indexOf('--concurrency')
-const CONCURRENCY = concurrencyIdx >= 0 ? args[concurrencyIdx + 1] : '3'
+const CONCURRENCY = concurrencyIdx >= 0 ? args[concurrencyIdx + 1] : '5'
 const CDP_URL = process.env.CDP_URL || 'http://127.0.0.1:9222'
 const RESULTS_FILE = process.env.RESULTS_FILE || '/tmp/px-batch-results.json'
 const FAILED_FILE = process.env.FAILED_FILE || '/tmp/px-batch-failed.json'
@@ -206,6 +206,13 @@ try {
     console.error(`[pipeline]    npm run chrome`)
     console.error(`[pipeline]`)
     process.exit(1)
+}
+
+// ── 4.5. Renova cf_clearance via FlareSolverr (opt-in) ───────────────────────
+if (process.env.FLARESOLVERR_URL) {
+    header('Verificando cf_clearance (FlareSolverr)')
+    const cfCode = await run('node', [resolve(ROOT, 'scripts/renew-cf-clearance.mjs')])
+    if (cfCode !== 0) warn('Renovação de cf_clearance falhou — continuando assim mesmo')
 }
 
 // ── 5. Garante diretório de evidências ────────────────────────────────────────

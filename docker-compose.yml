@@ -1,0 +1,38 @@
+version: '3.8'
+
+# ── FlareSolverr ──────────────────────────────────────────────────────────────
+# Resolve desafios Cloudflare (cf_clearance) automaticamente.
+#
+# Uso:
+#   docker compose up -d flaresolverr
+#
+# Integração com o pipeline:
+#   Defina FLARESOLVERR_URL no .env (já presente por padrão):
+#     FLARESOLVERR_URL=http://localhost:8191/v1
+#
+#   O script scripts/renew-cf-clearance.mjs chama o FlareSolverr quando
+#   cf_clearance está ausente ou expirado no perfil do Chrome.
+#
+#   O pipeline (run-all.mjs) chama o renewal automaticamente na etapa 4.5
+#   se FLARESOLVERR_URL estiver definido.
+#
+# Referência: https://github.com/FlareSolverr/FlareSolverr
+
+services:
+  flaresolverr:
+    image: ghcr.io/flaresolverr/flaresolverr:latest
+    container_name: flaresolverr
+    ports:
+      - "8191:8191"
+    environment:
+      - LOG_LEVEL=info
+      - LOG_HTML=false
+      - CAPTCHA_SOLVER=none
+      - TZ=America/Sao_Paulo
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-sf", "http://localhost:8191/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

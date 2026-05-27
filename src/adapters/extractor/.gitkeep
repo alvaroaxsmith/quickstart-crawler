@@ -1,4 +1,0 @@
-# Parser adapters (port: ProductExtractor)
-# Implementações desta camada são responsáveis APENAS por transformar bytes/JSON em Product
-# (mapear payload da API ou HTML para os 7 campos de §4) — sem rede, sem persistência.
-# Próximas tasks: B4 (IfoodApiExtractor primário), B5 (IfoodDomExtractor fallback).

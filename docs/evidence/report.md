@@ -1,6 +1,6 @@
 # Relatório de Execução — Crawler iFood
 
-> **Gerado em:** 2026-05-27T07:01:41.982Z
+> **Gerado em:** 2026-05-27T15:27:35.450Z
 > **Fonte:** `/Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json`
 
 ---
@@ -68,7 +68,8 @@ Falha    [███████████░░░░░░░░░░░░�
 
 | Mensagem | Ocorrências | % dos Erros |
 |---|---|---|
-| Preço não encontrado | 358 | 100.0% |
+| UNAVAILABLE: produto indisponível (fora da área de entrega ou bloqueio temporário) | 305 | 85.2% |
+| DEACTIVATED: loja desativada no iFood (URL inativa) | 53 | 14.8% |
 
 ---
 

@@ -51,4 +51,4 @@ coverage/
 .LSOverride
 
 case.md
-input
+.input/

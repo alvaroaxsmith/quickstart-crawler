@@ -63,11 +63,14 @@ npm run crawl -- --group pao
 npm run crawl -- --group carrefour
 npm run crawl -- --group farmacia
 
-# Ajustar concorrência (default: 3 workers)
-npm run crawl -- --concurrency 4
+# Ajustar concorrência (default: 5 workers)
+npm run crawl -- --concurrency 5
 
 # Re-tentar apenas os itens que falharam
 npm run crawl:retry
+
+# Renovar cf_clearance via FlareSolverr (requer Docker)
+npm run cf:renew
 
 # Gerar relatório manualmente
 npm run report
@@ -104,21 +107,32 @@ Após a execução, os arquivos ficam em:
     "normal_price": "R$ 31,99",
     "discount_price": null,
     "product_url": "https://www.ifood.com.br/delivery/brasilia-df/pao-de-acucar-.../5938ca36...?item=c2296a33...",
-    "image_url": "https://static-images.ifood.com.br/image/upload/t_high/pratos/820af392.../xyz.jpg",
+    "image_url": null,
     "status": "success",
     "error_message": null
   },
   {
-    "title": "Produto Indisponível",
+    "title": null,
     "normal_price": null,
     "discount_price": null,
     "product_url": "https://www.ifood.com.br/...",
     "image_url": null,
     "status": "error",
-    "error_message": "Preço não encontrado"
+    "error_message": "DEACTIVATED: loja desativada no iFood (URL inativa)"
+  },
+  {
+    "title": null,
+    "normal_price": null,
+    "discount_price": null,
+    "product_url": "https://www.ifood.com.br/...",
+    "image_url": null,
+    "status": "error",
+    "error_message": "UNAVAILABLE: produto indisponível (fora da área de entrega ou bloqueio temporário)"
   }
 ]
 ```
+
+> **Nota sobre `image_url`:** O campo está presente no schema de saída, mas contém `null` na execução atual. A API interna do iFood exige tokens de autorização que só o SPA React injeta automaticamente durante a navegação da página — chamadas diretas à API (mesmo com `cf_clearance` válido) retornam 403. O campo é extraído corretamente pelo pipeline (`logoUrl` do payload XHR) em novos crawls que interceptem a resposta via `page.on('response')`, mas não é recuperável retroativamente do cache sem re-crawl completo.
 
 ---
 
@@ -155,11 +169,17 @@ O iFood usa duas camadas de proteção:
 1. Worker navega para a URL do produto (page.goto)
 2. React dispara XHR para /site-api/v1/merchants/.../items/...
 3. page.on('response') intercepta a resposta JSON → extrai preço
-4. Se 403 (PX bloqueio):
-   └── resolve "press and hold" 12s (mutex: 1 worker por vez)
-   └── fetch imediato após solve (janela de ~400ms)
+4. Se 403 (PX bloqueio) — Batch Solver:
+   └── 1º worker vira solver; demais registram sua URL na fila (janela 60ms)
+   └── Solver executa "press and hold" ~12s
+   └── Todas as URLs da fila são buscadas em paralelo NA ABA DO SOLVER,
+       antes do reload da SPA invalidar o _px3 recém-validado
+   └── Cada worker recebe seu resultado sem re-navegar
+   └── Fallback: se o batch falhar, o worker re-navega para XHR fresh
 5. Salva resultado no cache incremental (/tmp/px-batch-results.json)
 ```
+
+> **Por que batch e não fetch individual por worker?** Após o solve, o SPA recarrega a página e emite um novo `_px3` inválido — sobrescrevendo o cookie válido para _todas_ as abas. Fazer os fetches em batch na aba do solver (antes do reload) é a única janela válida.
 
 **Retry automático:** ao final de cada grupo, itens com falha são re-enfileirados em rodada-2.
 
@@ -177,9 +197,36 @@ ORIGINAL=data/products_output.json
 OUTPUT_FILE=data/products_output_enriched.json
 RESULTS_FILE=/tmp/px-batch-results.json
 FAILED_FILE=/tmp/px-batch-failed.json
+
+# FlareSolverr — renovação automática de cf_clearance (opcional, ver seção abaixo)
+FLARESOLVERR_URL=http://localhost:8191/v1
 ```
 
-A concorrência padrão é **3 workers**. Valores de 3–5 são recomendados.
+A concorrência padrão é **5 workers**. O Batch PX Solver garante que 1 solve serve todos os workers simultaneamente — aumentar além de 5 tem retorno decrescente.
+
+---
+
+## FlareSolverr — Renovação Automática de cf_clearance (opcional)
+
+O `cf_clearance` expira em ~30 min. O FlareSolverr resolve o Cloudflare automaticamente em background, eliminando a necessidade de reabrir o Chrome manualmente.
+
+### Subir o serviço
+
+```bash
+docker compose up -d flaresolverr
+```
+
+O serviço fica disponível em `http://localhost:8191`. Com `FLARESOLVERR_URL` definido no `.env`, o pipeline verifica e renova o `cf_clearance` automaticamente antes de cada crawl (etapa 4.5 do `run-all.mjs`).
+
+### Renovação manual
+
+```bash
+npm run cf:renew
+```
+
+É um no-op se o cookie ainda estiver válido (expira em > 5 min).
+
+> **Requer Docker instalado.** O FlareSolverr roda em container Linux — não precisa de Chrome extra, usa seu próprio Chromium headless internamente para resolver o Cloudflare.
 
 ---
 
@@ -198,7 +245,8 @@ A concorrência padrão é **3 workers**. Valores de 3–5 são recomendados.
 | Cenário | Comportamento |
 |---|---|
 | `403` (PX bloqueio) | Aciona solve do challenge → retry imediato |
-| `200` sem dados | Produto indisponível — `status: "error"` no output |
+| `200` sem dados | Produto indisponível/fora da área de entrega — `status: "error"`, `error_message: "UNAVAILABLE: ..."` |
+| URL com `desativada` no slug | Loja desativada no iFood — `status: "error"`, `error_message: "DEACTIVATED: ..."` |
 | Timeout de navegação | Catch silencioso, avança para o próximo item |
 | Context destroyed | Chrome recarregou durante fetch — retry na rodada-2 |
 | URL inválida | Item pulado sem crash |
@@ -240,17 +288,20 @@ npm run crawl:retry
 | Preço máximo | R$ 301,99 |
 | Preço médio | R$ 35,16 |
 
-> As 358 falhas são majoritariamente itens `OUT_OF_DELIVERY_AREA` — lojas fora da área de entrega do endereço-âncora configurado no profile. Ver limitação 5 abaixo.
+> As 358 falhas se dividem em duas categorias registradas no output:
+> - **53 DEACTIVATED** — lojas com `desativada` no slug da URL: lojas permanentemente desativadas no iFood, independente de endereço ou sessão.
+> - **305 UNAVAILABLE** — produto não retornou preço: combinação de bloqueio de bot (403, ~30% das tentativas nos logs) e itens fora da área de entrega do endereço-âncora (200 sem dado de preço, ~65%). Ambas as categorias são indistinguíveis no output final pois o cache só persiste sucessos.
 
 ---
 
 ## Limitações Conhecidas
 
 1. **Requer Chrome headful local** — Cookies vinculados ao fingerprint TLS. Não funciona em Docker headless.
-2. **Throughput limitado pelo PX solve** — ~12s por solve. Com 3 workers: ~8–12 itens/minuto.
+2. **Throughput limitado pelo PX solve** — ~12s por solve. Com o Batch Solver, 1 solve serve todos os workers simultaneamente: com 5 workers, ~15–25 itens/minuto em batches de 403.
 3. **Mouse exclusivo** — O solve PX usa o mouse físico. Não rodar duas instâncias em paralelo.
-4. **Sessão expira (~30 min)** — Se `cf_clearance` expirar, basta reabrir Chrome com `npm run chrome`.
-5. **Cobertura por endereço-âncora** — Lojas fora da área de entrega do endereço setado no profile não retornam preço (categorizadas como `OUT_OF_DELIVERY_AREA`).
+4. **Sessão expira (~30 min)** — Se `cf_clearance` expirar: com FlareSolverr em execução, é renovado automaticamente (`npm run cf:renew` ou etapa 4.5 do pipeline). Sem FlareSolverr: reabra Chrome com `npm run chrome`.
+5. **Cobertura por endereço-âncora** — Lojas fora da área de entrega do endereço setado no profile não retornam preço (categorizadas como `UNAVAILABLE` no output).
+6. **`image_url` é `null` no dataset atual** — A API interna do iFood bloqueia (403) chamadas diretas mesmo com `cf_clearance` válido: ela exige tokens de autorização injetados pelo SPA React. O campo `logoUrl` é extraído e persistido pelo pipeline em novas execuções (via `page.on('response')`), mas não é recuperável do cache sem re-crawl completo das 641 URLs bem-sucedidas.
 
 ---
 
@@ -275,6 +326,14 @@ node --check scripts/run-all.mjs
 
 **Profile expirou (`cf_clearance: ❌` no warm-up)**
 
+**Com FlareSolverr (Docker):**
+```bash
+docker compose up -d flaresolverr   # se ainda não estiver rodando
+npm run cf:renew                    # injeta cf_clearance no Chrome
+npm run crawl                       # retoma
+```
+
+**Sem FlareSolverr (manual):**
 1. Encerre o processo aberto via `npm run chrome` (Ctrl+C no terminal dele).
 2. Reabra com `npm run chrome`.
 3. Navegue manualmente para https://www.ifood.com.br e resolva o Cloudflare/login até a home carregar normalmente.
