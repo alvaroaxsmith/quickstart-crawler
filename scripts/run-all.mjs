@@ -17,88 +17,37 @@
  *   npm run crawl -- --concurrency 4  # N workers (default: 3)
  */
 
-import { spawn, execSync } from 'child_process'
+import { execSync } from 'child_process'
 import {
     existsSync,
     unlinkSync,
     copyFileSync,
     mkdirSync,
-    createWriteStream,
     readFileSync,
     writeFileSync,
     statSync,
 } from 'fs'
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
+import { run } from './lib/process.mjs'
+import { createLogger } from './lib/logger.mjs'
+import { hasFlag, getOption } from './lib/cli.mjs'
+import { splitIntoGroups } from './lib/groups.mjs'
 
 const __dirname = dirname(fileURLToPath(
     import.meta.url))
 const ROOT = resolve(__dirname, '..')
 
-// ── Args ──────────────────────────────────────────────────────────────────────
+const { header, info: log, warn } = createLogger('pipeline')
+
+// ── Args ───────────────────────────────────────────────────────────────────────
 const args = process.argv.slice(2)
-const RESET = args.includes('--reset')
-const specificGroup = args.indexOf('--group') >= 0 ? args[args.indexOf('--group') + 1] : null
-const concurrencyIdx = args.indexOf('--concurrency')
-const CONCURRENCY = concurrencyIdx >= 0 ? args[concurrencyIdx + 1] : '5'
+const RESET = hasFlag(args, '--reset')
+const specificGroup = getOption(args, '--group')
+const CONCURRENCY = getOption(args, '--concurrency', '5')
 const CDP_URL = process.env.CDP_URL || 'http://127.0.0.1:9222'
 const RESULTS_FILE = process.env.RESULTS_FILE || '/tmp/px-batch-results.json'
 const FAILED_FILE = process.env.FAILED_FILE || '/tmp/px-batch-failed.json'
-
-// ── Helpers ───────────────────────────────────────────────────────────────────
-function header(msg) {
-    const line = '═'.repeat(50)
-    console.log(`\n[pipeline] ${line}`)
-    console.log(`[pipeline]  ${msg}`)
-    console.log(`[pipeline] ${line}`)
-}
-
-function log(msg) { console.log(`[pipeline] ${msg}`) }
-
-function warn(msg) { console.warn(`[pipeline] ⚠️  ${msg}`) }
-
-/**
- * Corrige operadores ?? e ?? que formatadores como o built-in do VS Code podem
- * corromper adicionando espaços (?? e ?.). Chamado imediatamente antes de cada
- * spawn para garantir que o arquivo está correto independente do estado no disco.
- */
-function fixScript(_filePath) {
-    // No-op: scripts já foram corrigidos manualmente. O auto-fix anterior tinha
-    // regexes ambíguos que corrompiam tanto `??` quanto ternários `?`.
-}
-
-/** Executa child process com saída em tempo real + gravação em logFile (append). */
-function run(cmd, cmdArgs, { logFile, append = false } = {}) {
-    // Corrige qualquer script .mjs imediatamente antes do spawn
-    if (cmd === 'node' && cmdArgs[0] && cmdArgs[0].endsWith('.mjs')) fixScript(cmdArgs[0])
-
-    return new Promise((res) => {
-        const child = spawn(cmd, cmdArgs, { cwd: ROOT, stdio: ['inherit', 'pipe', 'pipe'] })
-        const logStream = logFile ? createWriteStream(logFile, { flags: append ? 'a' : 'w' }) : null
-
-        const write = (data) => { process.stdout.write(data); if (logStream) logStream.write(data) }
-        const writeErr = (data) => { process.stderr.write(data); if (logStream) logStream.write(data) }
-
-        child.stdout.on('data', write)
-        child.stderr.on('data', writeErr)
-        child.on('close', (code) => {
-            if (logStream) logStream.end();
-            res(code == null ? 0 : code)
-        })
-    })
-}
-
-/** Mapeia slug de merchant → grupo. */
-function slugToGroup(slug) {
-    if (slug.includes('pao-de-acucar')) return 'pao'
-    if (slug.includes('carrefour')) return 'carrefour'
-    if (
-        slug.includes('droga') || slug.includes('farma') ||
-        slug.includes('panvel') || slug.includes('raia') ||
-        slug.includes('ultrafarma')
-    ) return 'farmacia'
-    return null // ignora merchants desativados / outros
-}
 
 // ── 1. Reset opcional ─────────────────────────────────────────────────────────
 if (RESET) {
@@ -140,7 +89,7 @@ const needsBuild = !existsSync(distTurnstile) || newestMtime(srcDir) > statSync(
 
 if (needsBuild) {
     log('dist/ desatualizado — compilando TypeScript...')
-    const buildCode = await run('npx', ['tsc'])
+    const buildCode = await run('npx', ['tsc'], { cwd: ROOT })
     if (buildCode !== 0) {
         console.error('[pipeline] ❌ Build falhou. Corrija os erros e tente novamente.');
         process.exit(1)
@@ -161,17 +110,7 @@ if (!existsSync(SOURCE_FILE)) {
 }
 
 const allProducts = JSON.parse(readFileSync(SOURCE_FILE, 'utf8'))
-const groupBuckets = { pao: [], carrefour: [], farmacia: [] }
-
-for (const p of allProducts) {
-    const url = p.product_url || p.productUrl || ''
-    const match = url.match(/delivery\/[^/]+\/([^/]+)\//)
-    if (!match) continue
-    const slug = match[1].split('---')[0]
-    const group = slugToGroup(slug)
-    if (!group) continue
-    groupBuckets[group].push({ productUrl: url, name: p.title || p.name || '' })
-}
+const groupBuckets = splitIntoGroups(allProducts)
 
 const allItems = [...groupBuckets.pao, ...groupBuckets.carrefour, ...groupBuckets.farmacia]
 writeFileSync(resolve(ROOT, 'data/groups/urls-all.json'), JSON.stringify(allItems, null, 2))

@@ -298,7 +298,7 @@ npm run crawl:retry
 
 1. **Requer Chrome headful local** — Cookies vinculados ao fingerprint TLS. Não funciona em Docker headless.
 2. **Throughput limitado pelo PX solve** — ~12s por solve. Com o Batch Solver, 1 solve serve todos os workers simultaneamente: com 5 workers, ~15–25 itens/minuto em batches de 403.
-3. **Mouse exclusivo** — O solve PX usa o mouse físico. Não rodar duas instâncias em paralelo.
+3. **Chrome headful single-instance** — O solve PX usa `page.mouse` (CDP virtual, não mouse físico), mas exige Chrome visível (não headless). Rodar duas instâncias simultâneas no mesmo perfil causa conflito de cookies.
 4. **Sessão expira (~30 min)** — Se `cf_clearance` expirar: com FlareSolverr em execução, é renovado automaticamente (`npm run cf:renew` ou etapa 4.5 do pipeline). Sem FlareSolverr: reabra Chrome com `npm run chrome`.
 5. **Cobertura por endereço-âncora** — Lojas fora da área de entrega do endereço setado no profile não retornam preço (categorizadas como `UNAVAILABLE` no output).
 6. **`image_url` é `null` no dataset atual** — A API interna do iFood bloqueia (403) chamadas diretas mesmo com `cf_clearance` válido: ela exige tokens de autorização injetados pelo SPA React. O campo `logoUrl` é extraído e persistido pelo pipeline em novas execuções (via `page.on('response')`), mas não é recuperável do cache sem re-crawl completo das 641 URLs bem-sucedidas.
@@ -353,7 +353,6 @@ Verifique se a porta 9222 está acessível: `curl http://127.0.0.1:9222/json/ver
 
 - **CAPTCHA solver pago como fallback automático** — integrar [CapSolver](https://capsolver.com) ou [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) (ADRs [0009](docs/adr/0009-capsolver-cloudflare-challenge.md) e [0010](docs/adr/0010-flaresolverr-free-alternative.md)) para remover dependência do solve manual via mouse físico e permitir paralelismo real entre máquinas.
 - **Proxy residencial rotativo** — distribuir o tráfego entre múltiplos IPs/sessões reduziria a frequência dos challenges PX (ver [ADR-0008](docs/adr/0008-residential-proxy.md)).
-- **Docker compose** — o case considera diferencial. Hoje a dependência de Chrome real + mouse no host impede containerização direta; uma alternativa seria um container com VNC + xdotool ou usar o solver pago acima para virar headless-friendly.
 - **Persistência em banco** — substituir os JSONs por SQLite/Postgres facilitaria queries e dashboards. A camada `ResultSink` já é uma porta hexagonal — basta um novo adapter.
 - **Observabilidade** — exportar métricas em formato Prometheus / OpenTelemetry; hoje as métricas vivem só no `summary.json`.
 - **Testes de integração com fixtures HTTP** — os 113 testes unitários cobrem domínio e adapters isolados; falta uma suíte que exercite a pipeline ponta-a-ponta com respostas iFood mockadas (sem depender de Chrome).
@@ -377,8 +376,16 @@ src/
 scripts/
   run-all.mjs               ← pipeline completa (npm run crawl)
   px-batch-parallel.mjs     ← crawler paralelo por grupo
+  renew-cf-clearance.mjs    ← renova cf_clearance via FlareSolverr
   generate-report.mjs       ← dashboard de métricas (npm run report)
-  lib/                      ← utilitários compartilhados
+  remerge.mjs               ← re-merge manual de resultados parciais
+  lib/
+    cli.mjs                 ← parsing de args (hasFlag, getOption)
+    logger.mjs              ← createLogger (info/warn/error/header)
+    process.mjs             ← run(cmd, args) — spawn com log em arquivo
+    groups.mjs              ← slugToGroup + splitIntoGroups
+    px-solver.mjs           ← Batch PX Solver (queueBatchFetch)
+    xhr-capture.mjs         ← captureItemXhr (intercepção XHR do iFood)
 
 data/
   products_output.json      ← base (título + URL + imagem, sem preço)
