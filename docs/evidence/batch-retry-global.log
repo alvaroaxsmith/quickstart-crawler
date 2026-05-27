@@ -1,0 +1,718 @@
+[batch] retry-only: 134 itens para retentar
+[batch] Warm-up iFood home...
+[batch] warm-up OK | cf_clearance: ✅ | _px3: ✅
+[batch] 3 workers (abas) prontos
+
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 3/134] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 4/134] ❌                                  | status=403
+[W2][rodada-1 4/134] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 6/134] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 7/134] ❌                                  | status=200
+[W2][rodada-1 7/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 9/134] ❌                                  | status=200
+[W2][rodada-1 10/134] ❌                                  | status=200
+[W1][rodada-1 11/134] ❌                                  | status=200
+[W2][rodada-1 12/134] ❌                                  | status=200
+[W1][rodada-1 12/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 14/134] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 15/134] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 16/134] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+[W2][rodada-1 17/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 18/134] ❌                                  | status=200
+[W3][rodada-1 19/134] ❌                                  | status=200
+[W3][rodada-1 20/134] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 21/134] ❌                                  | status=200
+[W1][rodada-1 21/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 23/134] ❌                                  | status=200
+[W1][rodada-1 24/134] ❌                                  | status=200
+[W1][rodada-1 25/134] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 26/134] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+[W2][rodada-1 27/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 28/134] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 29/134] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+[W3][rodada-1 30/134] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 31/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 32/134] ❌                                  | status=200
+[W1][rodada-1 32/134] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 34/134] ❌                                  | status=200
+[W2][rodada-1 35/134] ❌                                  | status=200
+[W2][rodada-1 36/134] ✅                                  | R$ 56.52
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 37/134] ❌                                  | status=200
+[W1][rodada-1 37/134] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 39/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 40/134] ❌                                  | status=200
+[W1][rodada-1 40/134] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 42/134] ❌                                  | status=200
+[W2][rodada-1 43/134] ❌                                  | status=200
+[W2][rodada-1 44/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 45/134] ❌                                  | status=200
+[W1][rodada-1 45/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 47/134] ❌                                  | status=200
+[W2][rodada-1 48/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 49/134] ❌                                  | status=200
+[W1][rodada-1 49/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 51/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 52/134] ❌                                  | status=200
+[W1][rodada-1 52/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 54/134] ❌                                  | status=200
+[W2][rodada-1 55/134] ❌                                  | status=200
+[W2][rodada-1 56/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 57/134] ❌                                  | status=200
+[W3][rodada-1 57/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 59/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 60/134] ❌                                  | status=200
+[W1][rodada-1 60/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 62/134] ✅                                  | R$ 94.99
+[W3][rodada-1 63/134] ✅                                  | R$ 89.29
+[W3][rodada-1 64/134] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 65/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+[W1][rodada-1 66/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 67/134] ✅                                  | R$ 123.99
+[W2][rodada-1 68/134] ❌                                  | status=200
+[W3][rodada-1 68/134] ❌                                  | status=200
+[W2][rodada-1 70/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 71/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 72/134] ❌                                  | status=200
+[W3][rodada-1 73/134] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 74/134] ❌                                  | status=200
+[W1][rodada-1 74/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 76/134] ❌                                  | status=200
+[W3][rodada-1 77/134] ❌                                  | status=200
+[W3][rodada-1 78/134] ❌                                  | status=200
+[W3][rodada-1 79/134] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 80/134] ❌                                  | status=200
+[W1][rodada-1 80/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 82/134] ❌                                  | status=403
+[W3][rodada-1 83/134] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 84/134] ❌                                  | status=403
+[W1][rodada-1 84/134] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 86/134] ❌                                  | status=200
+[W3][rodada-1 86/134] ❌                                  | status=200
+[W1][rodada-1 88/134] ❌                                  | status=200
+[W3][rodada-1 88/134] ❌                                  | status=200
+[W1][rodada-1 90/134] ❌                                  | status=200
+[W3][rodada-1 90/134] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 92/134] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 93/134] ❌                                  | status=200
+[W1][rodada-1 94/134] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 95/134] ❌                                  | status=200
+[W2][rodada-1 95/134] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 97/134] ❌                                  | status=403
+[W3][rodada-1 98/134] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 99/134] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 100/134] ❌                                  | status=403
+[W1][rodada-1 100/134] ❌                                  | status=403
+[W2][rodada-1 100/134] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 103/134] ❌                                  | status=403
+[W3][rodada-1 104/134] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 105/134] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 106/134] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 107/134] ❌                                  | status=403
+[W1][rodada-1 107/134] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 109/134] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 110/134] ❌                                  | status=403
+[W3][rodada-1 110/134] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 112/134] ❌                                  | status=200
+[W2][rodada-1 113/134] ❌                                  | status=200
+[W2][rodada-1 114/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 115/134] ❌                                  | status=200
+[W3][rodada-1 115/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 117/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 118/134] ❌                                  | status=200
+[W1][rodada-1 118/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 120/134] ❌                                  | status=200
+[W2][rodada-1 121/134] ❌                                  | status=200
+[W2][rodada-1 122/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 123/134] ❌                                  | status=200
+[W1][rodada-1 123/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 125/134] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 126/134] ❌                                  | status=403
+[W1][rodada-1 126/134] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 128/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 129/134] ❌                                  | status=200
+[W3][rodada-1 129/134] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 131/134] ✅                                  | R$ 8.40
+[W2][rodada-1 132/134] ❌                                  | status=200
+[W2][rodada-1 133/134] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 134/134] ❌                                  | status=200
+[W3][rodada-1 134/134] ❌                                  | status=200
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+[W2][rodada-1 134/134] ❌                                  | status=200
+
+[batch] rodada-1 concluída: ✅ 5 | ❌ 129 | total 134/134
+
+[batch] Retry automático: 129 itens que falharam...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 3/129] ✅                                  | R$ 9.39
+[W2][retry 4/129] ❌                                  | status=200
+[W2][retry 5/129] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 6/129] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+[W3][retry 7/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 8/129] ❌                                  | status=200
+[W1][retry 9/129] ❌                                  | status=200
+[W2][retry 10/129] ❌                                  | status=200
+[W1][retry 11/129] ❌                                  | status=200
+[W2][retry 12/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 13/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 14/129] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 15/129] ❌                                  | status=403
+[W1][retry 15/129] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 17/129] ❌                                  | status=200
+[W2][retry 18/129] ❌                                  | status=200
+[W2][retry 19/129] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 20/129] ❌                                  | status=200
+[W1][retry 20/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 22/129] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 23/129] ❌                                  | status=200
+[W3][retry 23/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 25/129] ❌                                  | status=200
+[W2][retry 26/129] ❌                                  | status=200
+[W2][retry 27/129] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 28/129] ❌                                  | status=200
+[W1][retry 28/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 30/129] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 31/129] ❌                                  | status=403
+[W1][retry 31/129] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 33/129] ❌                                  | status=200
+[W2][retry 34/129] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 35/129] ❌                                  | status=200
+[W1][retry 35/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 37/129] ❌                                  | status=200
+[W2][retry 38/129] ❌                                  | status=200
+[W2][retry 39/129] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 40/129] ❌                                  | status=200
+[W1][retry 40/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 42/129] ❌                                  | status=200
+[W2][retry 42/129] ❌                                  | status=200
+[W3][retry 44/129] ❌                                  | status=200
+[W2][retry 45/129] ❌                                  | status=200
+[W3][retry 46/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 47/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 48/129] ❌                                  | status=200
+[W1][retry 49/129] ❌                                  | status=200
+[W1][retry 50/129] ❌                                  | status=200
+[W3][retry 50/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 52/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 53/129] ❌                                  | status=403
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 54/129] ❌                                  | status=403
+[W1][retry 54/129] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 56/129] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 57/129] ❌                                  | status=200
+[W2][retry 57/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 59/129] ❌                                  | status=200
+[W3][retry 60/129] ❌                                  | status=200
+[W2][retry 60/129] ❌                                  | status=200
+[W3][retry 62/129] ❌                                  | status=200
+[W2][retry 62/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 64/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 65/129] ❌                                  | status=200
+[W3][retry 65/129] ❌                                  | status=200
+[W3][retry 67/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 68/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 69/129] ❌                                  | status=200
+[W3][retry 69/129] ❌                                  | status=200
+[W1][retry 71/129] ❌                                  | status=200
+[W3][retry 72/129] ❌                                  | status=200
+[W1][retry 72/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 74/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 75/129] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 76/129] ❌                                  | status=403
+[W3][retry 76/129] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 78/129] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 79/129] ❌                                  | status=200
+[W3][retry 79/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 81/129] ❌                                  | status=200
+[W1][retry 82/129] ❌                                  | status=200
+[W1][retry 83/129] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 84/129] ❌                                  | status=200
+[W2][retry 84/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 86/129] ❌                                  | status=200
+[W1][retry 87/129] ❌                                  | status=200
+[W1][retry 88/129] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 89/129] ❌                                  | status=200
+[W2][retry 89/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 91/129] ❌                                  | status=200
+[W1][retry 92/129] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 93/129] ❌                                  | status=200
+[W2][retry 93/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 95/129] ❌                                  | status=200
+[W1][retry 96/129] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 97/129] ❌                                  | status=200
+[W2][retry 97/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 99/129] ❌                                  | status=200
+[W1][retry 100/129] ❌                                  | status=200
+[W1][retry 101/129] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 102/129] ❌                                  | status=200
+[W2][retry 102/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 104/129] ❌                                  | status=200
+[W1][retry 105/129] ❌                                  | status=200
+[W1][retry 106/129] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 107/129] ❌                                  | status=200
+[W2][retry 107/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 109/129] ❌                                  | status=200
+[W2][retry 110/129] ❌                                  | status=200
+[W2][retry 111/129] ❌                                  | status=200
+[W1][retry 112/129] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+[W3][retry 113/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 114/129] ❌                                  | status=200
+[W2][retry 115/129] ❌                                  | status=200
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 116/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+[W3][retry 117/129] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 118/129] ❌                                  | status=200
+[W2][retry 118/129] ❌                                  | status=200
+[W3][retry 120/129] ❌                                  | status=200
+[W2][retry 120/129] ❌                                  | status=200
+[W2][retry 122/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 123/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 124/129] ❌                                  | status=200
+[W1][retry 124/129] ❌                                  | status=200
+[W3][retry 126/129] ❌                                  | status=200
+[W1][retry 127/129] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 128/129] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 129/129] ❌                                  | status=403
+[W3][retry 129/129] ❌                                  | status=403
+[W2][retry 129/129] ❌                                  | status=403
+
+[batch] retry concluída: ✅ 1 | ❌ 128 | total 129/129
+
+[batch] 128 itens salvos em /tmp/px-batch-failed.json para análise
+        Re-execute com --retry-only para tentar novamente
+
+[batch] Total enriquecidos: 641
+[batch] Fazendo merge com products_output.json...
+[batch] Merge: 641/999 produtos com preço → /Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json

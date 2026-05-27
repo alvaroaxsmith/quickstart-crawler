@@ -1,0 +1,703 @@
+[batch] group=pao | total=215 | já feitos=0 | pendentes=215 | workers=3
+[batch] Warm-up iFood home...
+[batch] warm-up OK | cf_clearance: ✅ | _px3: ✅
+[batch] 3 workers (abas) prontos
+
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 3/215] ✅                                  | R$ 55.90
+[W1][rodada-1 3/215] ✅                                  | R$ 31.99
+[W1][rodada-1 5/215] ❌                                  | status=200
+[W2][rodada-1 5/215] ✅                                  | R$ 4.89
+[W3][rodada-1 5/215] ❌                                  | status=200
+[W1][rodada-1 8/215] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 9/215] ❌                                  | status=403
+[W1][rodada-1 9/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 11/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 12/215] ❌                                  | status=403
+[W2][rodada-1 12/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 14/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 15/215] ✅                                  | R$ 37.99
+[W2][rodada-1 15/215] ✅                                  | R$ 15.49
+[W1][rodada-1 15/215] ✅                                  | R$ 21.99
+[W1][rodada-1 18/215] ❌                                  | status=200
+[W2][rodada-1 18/215] ✅                                  | R$ 8.29
+[W3][rodada-1 18/215] ✅                                  | R$ 36.99
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 21/215] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 22/215] ❌                                  | status=403
+[W2][rodada-1 22/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 24/215] ✅                                  | R$ 44.99
+[W3][rodada-1 24/215] ✅                                  | R$ 22.99
+[W1][rodada-1 26/215] ❌                                  | status=200
+[W2][rodada-1 27/215] ✅                                  | R$ 128.99
+[W3][rodada-1 27/215] ✅                                  | R$ 13.99
+[W1][rodada-1 29/215] ❌                                  | status=200
+[W3][rodada-1 30/215] ✅                                  | R$ 79.90
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 31/215] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 32/215] ❌                                  | status=403
+[W3][rodada-1 32/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 34/215] ❌                                  | status=403
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 35/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+[W1][rodada-1 36/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 37/215] ✅                                  | R$ 14.99
+[W3][rodada-1 37/215] ✅                                  | R$ 25.99
+[W1][rodada-1 37/215] ✅                                  | R$ 17.49
+[W1][rodada-1 40/215] ✅                                  | R$ 18.49
+[W2][rodada-1 40/215] ✅                                  | R$ 11.99
+[W3][rodada-1 40/215] ✅                                  | R$ 17.49
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 43/215] ✅                                  | R$ 33.99
+[W1][rodada-1 43/215] ✅                                  | R$ 25.99
+[W2][rodada-1 43/215] ✅                                  | R$ 14.99
+[W3][rodada-1 46/215] ✅                                  | R$ 17.99
+[W1][rodada-1 46/215] ✅                                  | R$ 17.49
+[W2][rodada-1 46/215] ✅                                  | R$ 22.99
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 49/215] ✅                                  | R$ 14.99
+[W2][rodada-1 49/215] ✅                                  | R$ 69.90
+[W1][rodada-1 49/215] ✅                                  | R$ 62.99
+[W3][rodada-1 52/215] ✅                                  | R$ 6.99
+[W2][rodada-1 52/215] ✅                                  | R$ 6.79
+[W1][rodada-1 52/215] ✅                                  | R$ 21.99
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 55/215] ✅                                  | R$ 4.99
+[W1][rodada-1 55/215] ✅                                  | R$ 19.49
+[W3][rodada-1 55/215] ✅                                  | R$ 26.99
+[W2][rodada-1 58/215] ❌                                  | status=200
+[W3][rodada-1 58/215] ✅                                  | R$ 65.90
+[W1][rodada-1 58/215] ✅                                  | R$ 52.90
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 61/215] ❌                                  | status=403
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 62/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+[W1][rodada-1 63/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 64/215] ❌                                  | status=403
+[W1][rodada-1 65/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 66/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 67/215] ✅                                  | R$ 31.99
+[W1][rodada-1 67/215] ✅                                  | R$ 44.99
+[W2][rodada-1 67/215] ✅                                  | R$ 17.49
+[W3][rodada-1 70/215] ✅                                  | R$ 14.49
+[W2][rodada-1 70/215] ❌                                  | status=200
+[W1][rodada-1 70/215] ✅                                  | R$ 39.99
+[W3][rodada-1 73/215] ✅                                  | R$ 17.99
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 74/215] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 75/215] ❌                                  | status=403
+[W2][rodada-1 75/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 77/215] ✅                                  | R$ 62.99
+[W1][rodada-1 77/215] ✅                                  | R$ 19.49
+[W2][rodada-1 77/215] ✅                                  | R$ 43.99
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 80/215] ✅                                  | R$ 6.79
+[W3][rodada-1 80/215] ✅                                  | R$ 6.99
+[W1][rodada-1 80/215] ✅                                  | R$ 17.49
+[W3][rodada-1 83/215] ✅                                  | R$ 21.99
+[W2][rodada-1 83/215] ✅                                  | R$ 43.99
+[W1][rodada-1 83/215] ✅                                  | R$ 8.29
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 86/215] ✅                                  | R$ 25.99
+[W2][rodada-1 86/215] ✅                                  | R$ 21.99
+[W1][rodada-1 86/215] ✅                                  | R$ 8.99
+[W3][rodada-1 89/215] ✅                                  | R$ 39.99
+[W1][rodada-1 89/215] ✅                                  | R$ 6.99
+[W2][rodada-1 89/215] ✅                                  | R$ 5.79
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 92/215] ❌                                  | status=403
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 93/215] ❌                                  | status=403
+[W2][rodada-1 93/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 95/215] ✅                                  | R$ 36.99
+[W1][rodada-1 95/215] ✅                                  | R$ 40.99
+[W3][rodada-1 97/215] ✅                                  | R$ 18.49
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 98/215] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 99/215] ✅                                  | R$ 14.99
+[W2][rodada-1 99/215] ✅                                  | R$ 14.49
+[W3][rodada-1 99/215] ✅                                  | R$ 36.99
+[W1][rodada-1 102/215] ✅                                  | R$ 17.49
+[W3][rodada-1 102/215] ✅                                  | R$ 43.99
+[W2][rodada-1 102/215] ✅                                  | R$ 20.99
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 105/215] ✅                                  | R$ 7.49
+[W3][rodada-1 105/215] ✅                                  | R$ 13.99
+[W1][rodada-1 107/215] ❌                                  | status=200
+[W2][rodada-1 108/215] ✅                                  | R$ 8.49
+[W3][rodada-1 108/215] ❌                                  | status=200
+[W1][rodada-1 110/215] ❌                                  | status=200
+[W3][rodada-1 110/215] ✅                                  | R$ 6.79
+[W2][rodada-1 110/215] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 113/215] ✅                                  | R$ 20.99
+[W1][rodada-1 113/215] ✅                                  | R$ 20.99
+[W2][rodada-1 113/215] ✅                                  | R$ 13.49
+[W1][rodada-1 116/215] ❌                                  | status=200
+[W2][rodada-1 116/215] ✅                                  | R$ 22.99
+[W3][rodada-1 116/215] ✅                                  | R$ 10.49
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 119/215] ❌                                  | status=403
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 120/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+[W1][rodada-1 121/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 122/215] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 123/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+[W2][rodada-1 124/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 125/215] ✅                                  | R$ 95.90
+[W1][rodada-1 125/215] ✅                                  | R$ 18.99
+[W2][rodada-1 125/215] ✅                                  | R$ 15.49
+[W2][rodada-1 128/215] ✅                                  | R$ 31.99
+[W3][rodada-1 128/215] ❌                                  | status=200
+[W1][rodada-1 128/215] ✅                                  | R$ 26.99
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 131/215] ✅                                  | R$ 37.99
+[W2][rodada-1 131/215] ✅                                  | R$ 65.90
+[W1][rodada-1 133/215] ✅                                  | R$ 13.99
+[W2][rodada-1 133/215] ✅                                  | R$ 15.49
+[W1][rodada-1 135/215] ✅                                  | R$ 11.49
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 136/215] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 137/215] ✅                                  | R$ 14.99
+[W1][rodada-1 137/215] ✅                                  | R$ 21.99
+[W2][rodada-1 137/215] ✅                                  | R$ 41.99
+[W2][rodada-1 140/215] ✅                                  | R$ 11.99
+[W3][rodada-1 140/215] ✅                                  | R$ 17.99
+[W1][rodada-1 140/215] ✅                                  | R$ 11.49
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 143/215] ✅                                  | R$ 62.99
+[W1][rodada-1 143/215] ✅                                  | R$ 15.49
+[W3][rodada-1 143/215] ✅                                  | R$ 18.99
+[W2][rodada-1 146/215] ✅                                  | R$ 17.49
+[W3][rodada-1 146/215] ✅                                  | R$ 36.99
+[W1][rodada-1 146/215] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 149/215] ✅                                  | R$ 59.90
+[W1][rodada-1 149/215] ✅                                  | R$ 8.79
+[W3][rodada-1 149/215] ✅                                  | R$ 85.90
+[W1][rodada-1 152/215] ❌                                  | status=200
+[W3][rodada-1 152/215] ✅                                  | R$ 5.79
+[W2][rodada-1 152/215] ✅                                  | R$ 11.49
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 155/215] ✅                                  | R$ 6.49
+[W2][rodada-1 155/215] ✅                                  | R$ 5.79
+[W1][rodada-1 155/215] ✅                                  | R$ 16.49
+[W3][rodada-1 158/215] ✅                                  | R$ 14.99
+[W1][rodada-1 158/215] ✅                                  | R$ 19.49
+[W2][rodada-1 158/215] ✅                                  | R$ 14.49
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+[W1][rodada-1 161/215] ✅                                  | R$ 69.90
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 162/215] ✅                                  | R$ 24.99
+[W3][rodada-1 162/215] ✅                                  | R$ 59.90
+[W1][rodada-1 164/215] ✅                                  | R$ 22.99
+[W3][rodada-1 164/215] ✅                                  | R$ 17.99
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 166/215] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 167/215] ✅                                  | R$ 23.99
+[W2][rodada-1 167/215] ✅                                  | R$ 21.99
+[W2][rodada-1 169/215] ✅                                  | R$ 11.49
+[W1][rodada-1 169/215] ✅                                  | R$ 33.99
+[W3][rodada-1 169/215] ❌                                  | status=200
+[W2][rodada-1 172/215] ✅                                  | R$ 6.79
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 173/215] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][rodada-1 174/215] ❌                                  | status=403
+[W2][rodada-1 174/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 176/215] ✅                                  | R$ 16.49
+[W3][rodada-1 177/215] ❌                                  | status=200
+[W3][rodada-1 178/215] ✅                                  | R$ 14.99
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 179/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+[W2][rodada-1 180/215] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 181/215] ✅                                  | R$ 10.49
+[W1][rodada-1 181/215] ✅                                  | R$ 15.49
+[W3][rodada-1 181/215] ✅                                  | R$ 19.49
+[W3][rodada-1 184/215] ❌                                  | status=200
+[W2][rodada-1 184/215] ❌                                  | status=200
+[W1][rodada-1 184/215] ✅                                  | R$ 15.49
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 187/215] ✅                                  | R$ 14.49
+[W2][rodada-1 187/215] ✅                                  | R$ 75.90
+[W1][rodada-1 187/215] ✅                                  | R$ 10.99
+[W2][rodada-1 190/215] ✅                                  | R$ 32.99
+[W3][rodada-1 190/215] ✅                                  | R$ 25.99
+[W1][rodada-1 190/215] ✅                                  | R$ 21.99
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 193/215] ❌                                  | status=403
+[W1][rodada-1 193/215] ❌                                  | status=403
+[W2][rodada-1 195/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 196/215] ✅                                  | R$ 20.99
+[W2][rodada-1 196/215] ✅                                  | R$ 31.99
+[W3][rodada-1 198/215] ✅                                  | R$ 20.99
+[W2][rodada-1 198/215] ❌                                  | status=200
+[W3][rodada-1 200/215] ✅                                  | R$ 13.99
+[W2][rodada-1 200/215] ✅                                  | R$ 15.99
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][rodada-1 202/215] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 203/215] ✅                                  | R$ 13.99
+[W3][rodada-1 203/215] ✅                                  | R$ 11.99
+[W1][rodada-1 203/215] ✅                                  | R$ 4.79
+[W1][rodada-1 206/215] ✅                                  | R$ 27.99
+[W2][rodada-1 206/215] ✅                                  | R$ 43.99
+[W3][rodada-1 206/215] ✅                                  | R$ 12.49
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][rodada-1 209/215] ✅                                  | R$ 18.99
+[W3][rodada-1 209/215] ✅                                  | R$ 14.99
+[W1][rodada-1 209/215] ✅                                  | R$ 49.99
+[W2][rodada-1 212/215] ✅                                  | R$ 36.99
+[W3][rodada-1 212/215] ✅                                  | R$ 18.99
+[W1][rodada-1 212/215] ✅                                  | R$ 7.29
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 215/215] ✅                                  | R$ 65.90
+[W3][rodada-1 215/215] ✅                                  | R$ 14.49
+[W2][rodada-1 215/215] ✅                                  | R$ 12.99
+
+[batch] rodada-1 concluída: ✅ 149 | ❌ 66 | total 215/215
+
+[batch] Retry automático: 66 itens que falharam...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 3/66] ❌                                  | status=403
+[W2][retry 3/66] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 5/66] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 6/66] ✅                                  | R$ 12.49
+[W3][retry 6/66] ✅                                  | R$ 8.49
+[W1][retry 6/66] ✅                                  | R$ 9.29
+[W3][retry 9/66] ✅                                  | R$ 24.99
+[W1][retry 9/66] ✅                                  | R$ 39.99
+[W2][retry 11/66] ✅                                  | R$ 19.49
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 12/66] ✅                                  | R$ 17.49
+[W1][retry 13/66] ❌                                  | status=200
+[W1][retry 14/66] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 15/66] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+[W2][retry 16/66] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 17/66] ✅                                  | R$ 18.99
+[W3][retry 17/66] ✅                                  | R$ 14.99
+[W2][retry 19/66] ✅                                  | R$ 20.99
+[W3][retry 20/66] ✅                                  | R$ 23.99
+[W2][retry 21/66] ✅                                  | R$ 32.99
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 22/66] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 23/66] ✅                                  | R$ 18.99
+[W1][retry 23/66] ✅                                  | R$ 35.99
+[W3][retry 25/66] ✅                                  | R$ 36.99
+[W1][retry 25/66] ✅                                  | R$ 7.49
+[W1][retry 27/66] ✅                                  | R$ 14.99
+[W3][retry 27/66] ✅                                  | R$ 11.49
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 29/66] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 30/66] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 31/66] ❌                                  | status=403
+[W2][retry 31/66] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 33/66] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 34/66] ❌                                  | status=403
+[W2][retry 34/66] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 36/66] ❌                                  | status=403
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 37/66] ❌                                  | status=403
+[W2][retry 37/66] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 39/66] ❌                                  | status=200
+  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 40/66] ❌                                  | status=200
+[W2][retry 40/66] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: mouse.up
+  [W1][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 42/66] ✅                                  | R$ 5.79
+[W2][retry 43/66] ✅                                  | R$ 26.99
+[W2][retry 44/66] ✅                                  | R$ 9.29
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 45/66] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+[W3][retry 46/66] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][retry 47/66] ✅                                  | R$ 69.90
+[W3][retry 47/66] ✅                                  | R$ 12.49
+[W3][retry 49/66] ❌                                  | status=200
+[W1][retry 49/66] ❌                                  | status=200
+[W3][retry 51/66] ❌                                  | status=200
+[W1][retry 52/66] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 53/66] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 54/66] ✅                                  | R$ 35.99
+[W2][retry 55/66] ✅                                  | R$ 6.99
+[W3][retry 56/66] ❌                                  | status=200
+[W2][retry 57/66] ✅                                  | R$ 11.99
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W1][retry 58/66] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][retry 59/66] ❌                                  | status=200
+  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][retry 60/66] ❌                                  | status=200
+[W1][retry 60/66] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
+  [W3][PX] PX: mouse.up
+  [W3][PX] PX: resolvido (botão removido)
+  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 62/66] ✅                                  | R$ 37.99
+[W2][retry 63/66] ✅                                  | R$ 44.99
+[W2][retry 64/66] ✅                                  | R$ 20.99
+  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W3][retry 65/66] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+[W1][retry 66/66] ❌                                  | status=200
+  [W2][PX] PX: mouse.up
+  [W2][PX] PX: resolvido (botão removido)
+  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W2][retry 66/66] ❌                                  | status=200
+[W3][retry 66/66] ❌                                  | status=200
+
+[batch] retry concluída: ✅ 29 | ❌ 37 | total 66/66
+
+[batch] 37 itens salvos em /tmp/px-batch-failed.json para análise
+        Re-execute com --retry-only para tentar novamente
+
+[batch] Total enriquecidos: 178
+[batch] Fazendo merge com products_output.json...
+[batch] Merge: 178/999 produtos com preço → /Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json

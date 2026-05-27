@@ -17,7 +17,7 @@ import { extractPrice } from './price.mjs'
  */
 export function parseItemResponse(capturedJson, itemId) {
     if (!capturedJson) return null
-    const { normalPrice, discountPrice } = extractPrice(capturedJson, itemId)
+    const { normalPrice, discountPrice, title } = extractPrice(capturedJson, itemId)
     if (normalPrice === null) return null
-    return { normalPrice, discountPrice }
+    return { normalPrice, discountPrice, title }
 }

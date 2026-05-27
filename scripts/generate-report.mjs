@@ -17,7 +17,7 @@ const __dirname = dirname(fileURLToPath(
     import.meta.url))
 const PROJECT_ROOT = resolve(__dirname, '..')
 
-const OUTPUT_FILE = process.env.OUTPUT_FILE ? ? resolve(PROJECT_ROOT, 'data/products_output_enriched.json')
+const OUTPUT_FILE = process.env.OUTPUT_FILE ?? resolve(PROJECT_ROOT, 'data/products_output_enriched.json')
 const REPORT_JSON = resolve(PROJECT_ROOT, 'docs/evidence/summary.json')
 const REPORT_MD = resolve(PROJECT_ROOT, 'docs/evidence/report.md')
 
@@ -74,7 +74,7 @@ for (const [group, file] of Object.entries(GROUP_FILES)) {
     if (!existsSync(file)) continue
     const items = JSON.parse(readFileSync(file, 'utf8'))
     for (const item of items) {
-        const url = item.productUrl ? ? item.product_url ? ? ''
+        const url = item.productUrl ?? item.product_url ?? ''
         const m = url.match(/\/([0-9a-f-]{36})\?.tem=([0-9a-f-]{36})/)
         if (m) groupMap[`${m[1]}:${m[2]}`] = group
     }
@@ -122,16 +122,16 @@ const fieldCoverage = {
 // ── Breakdown de erros ──────────────────────────────────────────────────────
 const errorBreakdown = {}
 for (const p of products.filter(p => p.status === 'error')) {
-    const msg = p.error_message ? ? 'unknown'
-    errorBreakdown[msg] = (errorBreakdown[msg] ? ? 0) + 1
+    const msg = p.error_message ?? 'unknown'
+    errorBreakdown[msg] = (errorBreakdown[msg] ?? 0) + 1
 }
 
 // ── Breakdown por grupo ─────────────────────────────────────────────────────
 const groupStats = {}
 for (const p of products) {
-    const url = p.product_url ? ? ''
+    const url = p.product_url ?? ''
     const m = url.match(/\/([0-9a-f-]{36})\?.tem=([0-9a-f-]{36})/)
-    const group = m ? (groupMap[`${m[1]}:${m[2]}`] ? ? 'unknown') : 'unknown'
+    const group = m ? (groupMap[`${m[1]}:${m[2]}`] ?? 'unknown') : 'unknown'
     if (!groupStats[group]) groupStats[group] = { total: 0, success: 0, error: 0 }
     groupStats[group].total++
         if (p.status === 'success') groupStats[group].success++
@@ -143,7 +143,7 @@ const sampleDiscounted = products
     .filter(p => p.discount_price && p.normal_price)
     .slice(0, 5)
     .map(p => ({
-        title: (p.title ? ? '').slice(0, 45),
+        title: (p.title ?? '').slice(0, 45),
         normal_price: p.normal_price,
         discount_price: p.discount_price,
         saving_pct: (() => {
@@ -208,7 +208,7 @@ const groupRows = Object.entries(groupStats)
     .sort(([a], [b]) => a.localeCompare(b))
     .map(([g, s]) => {
         const r = s.total > 0 ? (s.success / s.total) * 100 : 0
-        const t = execTimes[g] ? ? '–'
+        const t = execTimes[g] ?? '–'
         return `| ${groupLabels[g] ?? g} | ${s.total} | ${s.success} | ${s.error} | ${r.toFixed(1)}% | ${t} |`
     })
     .join('\n')
@@ -300,7 +300,7 @@ ${errorRows || '| – | – | – |'}
 writeFileSync(REPORT_MD, md)
 
 // ── Export CSV ──────────────────────────────────────────────────────────────
-const CSV_FILE = process.env.CSV_FILE ? ? resolve(PROJECT_ROOT, 'data/products_output_enriched.csv')
+const CSV_FILE = process.env.CSV_FILE ?? resolve(PROJECT_ROOT, 'data/products_output_enriched.csv')
 
 function escapeCsv(val) {
     if (val == null) return ''

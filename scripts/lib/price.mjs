@@ -26,7 +26,7 @@ export function formatBRL(val) {
  */
 export function extractPrice(capturedJson, itemId) {
     if (!capturedJson || capturedJson.code !== '00') {
-        return { normalPrice: null, discountPrice: null }
+        return { normalPrice: null, discountPrice: null, title: null }
     }
 
     const menu = capturedJson.data ?.menu ?? []
@@ -38,18 +38,18 @@ export function extractPrice(capturedJson, itemId) {
                 const discount = (it.originalPrice != null && it.unitPrice != null && it.originalPrice !== it.unitPrice) ?
                     it.unitPrice :
                     null
-                return { normalPrice: normal, discountPrice: discount }
+                return { normalPrice: normal, discountPrice: discount, title: it.description ?? null }
             }
         }
     }
 
     // Fallback: usa o primeiro item do menu quando o itemId não corresponde
     const first = menu[0] ?.itens ?.[0]
-    if (!first) return { normalPrice: null, discountPrice: null }
+    if (!first) return { normalPrice: null, discountPrice: null, title: null }
 
     const normal = first.originalPrice ?? first.unitPrice ?? null
     const discount = (first.originalPrice != null && first.unitPrice != null && first.originalPrice !== first.unitPrice) ?
         first.unitPrice :
         null
-    return { normalPrice: normal, discountPrice: discount }
+    return { normalPrice: normal, discountPrice: discount, title: first.description ?? null }
 }

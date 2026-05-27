@@ -82,17 +82,17 @@ npm test
 
 Após a execução, os arquivos ficam em:
 
-```
-data/
-  products_output_enriched.json   ← dados completos (999 produtos)
-  products_output_enriched.csv    ← mesmos dados em CSV
-docs/evidence/
-  report.md                       ← dashboard com métricas (human-readable)
-  summary.json                    ← métricas estruturadas (machine-readable)
-  batch-pao.log                   ← log do grupo Pão de Açúcar
-  batch-carrefour.log             ← log do Carrefour
-  batch-farmacia.log              ← log das Farmácias
-```
+| Arquivo | Descrição |
+|---|---|
+| `data/products_output_enriched.json` | Dados completos (999 produtos) |
+| `data/products_output_enriched.csv` | Mesmos dados em CSV |
+| [docs/evidence/report.md](docs/evidence/report.md) | Dashboard com métricas (human-readable) |
+| [docs/evidence/summary.json](docs/evidence/summary.json) | Métricas estruturadas (machine-readable) |
+| [docs/evidence/batch-pao.log](docs/evidence/batch-pao.log) | Log do grupo Pão de Açúcar |
+| [docs/evidence/batch-carrefour.log](docs/evidence/batch-carrefour.log) | Log do Carrefour |
+| [docs/evidence/batch-farmacia.log](docs/evidence/batch-farmacia.log) | Log das Farmácias |
+
+> Todos os arquivos em `docs/evidence/` são versionados — refletem sempre a última execução completa.
 
 ### Formato do JSON de saída
 
@@ -123,12 +123,13 @@ docs/evidence/
 
 ## Grupos de Produtos
 
-| Grupo | Lojas | URLs |
-|---|---|---|
-| `pao` | Pão de Açúcar | 215 |
-| `carrefour` | Carrefour | 421 |
-| `farmacia` | Farmácias diversas | 363 |
-| **Total** | | **999** |
+| Grupo | Lojas | URLs | Sucesso | Taxa |
+|---|---|---|---|---|
+| `pao` | Pão de Açúcar | 215 | 178 | 82.8% |
+| `carrefour` | Carrefour | 368 | 228 | 62.0% |
+| `farmacia` | Farmácias diversas | 363 | 235 | 64.7% |
+| `outros` | Não classificados | 53 | 0 | 0.0% |
+| **Total** | | **999** | **641** | **64.2%** |
 
 Os arquivos de grupo são gerados automaticamente pela pipeline a partir de `data/products_output.json` (veja passo 2 do Quick Start). Para forçar a regeração:
 
@@ -224,7 +225,21 @@ Para reprocessar apenas os itens que falharam:
 npm run crawl:retry
 ```
 
-**Meta do case: ≥ 95%.** Os números reais ficam disponíveis após a primeira execução completa.
+### Resultados da Execução (2026-05-27)
+
+| Métrica | Valor |
+|---|---|
+| Total de URLs | **999** |
+| Produtos com preço | **641** |
+| Falhas | **358** |
+| **Taxa de sucesso** | **64.2%** |
+| Meta ≥ 95% | ❌ Não atingida |
+| Tempo total | 896m 33s |
+| Preço mínimo | R$ 4,63 |
+| Preço máximo | R$ 301,99 |
+| Preço médio | R$ 35,16 |
+
+> As 358 falhas são majoritariamente itens `OUT_OF_DELIVERY_AREA` — lojas fora da área de entrega do endereço-âncora configurado no profile. Ver limitação 5 abaixo.
 
 ---
 

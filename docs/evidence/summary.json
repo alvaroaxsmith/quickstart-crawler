@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-05-27T07:01:41.964Z",
+  "source_file": "/Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json",
+  "execution_time": {
+    "by_group": {
+      "pao": "338m 29s",
+      "carrefour": "257m 17s",
+      "farmacia": "300m 47s"
+    },
+    "total": "896m 33s"
+  },
+  "totals": {
+    "total_urls": 999,
+    "success": 641,
+    "errors": 358,
+    "success_rate_pct": 64.16,
+    "meets_95pct_target": false
+  },
+  "price_stats": {
+    "min": "R$ 4,63",
+    "max": "R$ 301,99",
+    "avg": "R$ 35,16",
+    "median": "R$ 23,10",
+    "with_discount": 0,
+    "with_discount_pct": 0,
+    "avg_discount_pct": null
+  },
+  "field_coverage": {
+    "title": {
+      "count": 641,
+      "pct": 64.16
+    },
+    "normal_price": {
+      "count": 641,
+      "pct": 64.16
+    },
+    "discount_price": {
+      "count": 0,
+      "pct": 0
+    },
+    "image_url": {
+      "count": 0,
+      "pct": 0
+    }
+  },
+  "by_group": {
+    "pao": {
+      "total": 215,
+      "success": 178,
+      "error": 37,
+      "rate_pct": 82.79
+    },
+    "carrefour": {
+      "total": 368,
+      "success": 228,
+      "error": 140,
+      "rate_pct": 61.96
+    },
+    "unknown": {
+      "total": 53,
+      "success": 0,
+      "error": 53,
+      "rate_pct": 0
+    },
+    "farmacia": {
+      "total": 363,
+      "success": 235,
+      "error": 128,
+      "rate_pct": 64.74
+    }
+  },
+  "error_breakdown": {
+    "Preço não encontrado": 358
+  },
+  "sample_discounted": []
+}

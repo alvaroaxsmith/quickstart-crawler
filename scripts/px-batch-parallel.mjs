@@ -66,23 +66,23 @@ function parseProductUrl(url) {
 }
 
 function extractPrice(capturedJson, itemId) {
-    if (!capturedJson || capturedJson.code !== '00') return { normalPrice: null, discountPrice: null }
+    if (!capturedJson || capturedJson.code !== '00') return { normalPrice: null, discountPrice: null, title: null }
     const menu = capturedJson.data ?.menu ?? []
     for (const cat of menu) {
         for (const it of(cat.itens ?? [])) {
             if (it.id === itemId || it.id === itemId ?.replace(/-/g, '')) {
                 const normal = it.originalPrice ?? it.unitPrice ?? null
                 const discount = (it.originalPrice != null && it.unitPrice != null && it.originalPrice !== it.unitPrice) ? it.unitPrice : null
-                return { normalPrice: normal, discountPrice: discount }
+                return { normalPrice: normal, discountPrice: discount, title: it.description ?? null }
             }
         }
     }
     // Fallback: primeiro item da resposta
     const first = menu[0] ?.itens ?.[0]
-    if (!first) return { normalPrice: null, discountPrice: null }
+    if (!first) return { normalPrice: null, discountPrice: null, title: null }
     const normal = first.originalPrice ?? first.unitPrice ?? null
     const discount = (first.originalPrice != null && first.unitPrice != null && first.originalPrice !== first.unitPrice) ? first.unitPrice : null
-    return { normalPrice: normal, discountPrice: discount }
+    return { normalPrice: normal, discountPrice: discount, title: first.description ?? null }
 }
 
 function formatBRL(val) {
@@ -200,9 +200,9 @@ async function processItem(page, item, workerIdx) {
         page.off('response', onResponse)
     }
 
-    const { normalPrice, discountPrice } = extractPrice(capturedJson, itemId)
+    const { normalPrice, discountPrice, title } = extractPrice(capturedJson, itemId)
     if (normalPrice !== null) {
-        return { success: true, normalPrice, discountPrice, merchantId, itemId }
+        return { success: true, normalPrice, discountPrice, title, merchantId, itemId }
     }
     return {
         success: false,
@@ -242,6 +242,7 @@ async function runQueue(pages, queue, label) {
                         itemId: result.itemId,
                         normalPrice: result.normalPrice,
                         discountPrice: result.discountPrice,
+                        title: result.title ?? '',
                     }
                     successCount++
                     const lbl = (item.name ?? ids.itemId ?? '').slice(0, 32).padEnd(32)
@@ -371,6 +372,7 @@ const enriched = original.map(p => {
     const discountVal = (r.discountPrice != null && r.discountPrice !== r.normalPrice) ? r.discountPrice : null
     return {
         ...p,
+        title: r.title || p.title || '',
         normal_price: formatBRL(r.normalPrice),
         discount_price: formatBRL(discountVal),
         status: 'success',
@@ -380,3 +382,4 @@ const enriched = original.map(p => {
 
 writeFileSync(OUTPUT_FILE, JSON.stringify(enriched, null, 2))
 console.log(`[batch] Merge: ${mergedCount}/${original.length} produtos com preço → ${OUTPUT_FILE}`)
+process.exit(0)

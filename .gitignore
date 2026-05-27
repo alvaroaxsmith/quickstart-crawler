@@ -16,8 +16,9 @@ data/groups/
 data/px-batch-results.json
 
 # ── Logs / Relatórios (gerados a cada corrida) ────────────────────────────────
-docs/evidence/
+# docs/evidence/ é commitado — contém relatório e logs da última execução
 *.log
+!docs/evidence/*.log
 pino*.json
 
 # ── Screenshots de smoke/debug ────────────────────────────────────────────────

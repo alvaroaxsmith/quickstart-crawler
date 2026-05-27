@@ -199,10 +199,11 @@ for (const [i, item] of items.entries()) {
     const priceData = parseItemResponse(capturedJson, item.itemId)
     const normalPrice = priceData ?.normalPrice ?? null
     const discountPrice = priceData ?.discountPrice ?? null
+    const title = priceData ?.title ?? null
 
     const label = (item.name ?? item.itemId ?? '?').toString().slice(0, 35).padEnd(35)
     if (normalPrice !== null) {
-        results[key] = { merchantId: item.merchantId, itemId: item.itemId, normalPrice, discountPrice }
+        results[key] = { merchantId: item.merchantId, itemId: item.itemId, normalPrice, discountPrice, title }
         successCount++
         console.log(`[${i+1}/${items.length}] ✅ ${label} | R$ ${Number(normalPrice).toFixed(2)}`)
         saveResults(RESULTS_FILE, results)
