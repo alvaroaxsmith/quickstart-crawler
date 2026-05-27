@@ -61,7 +61,7 @@ function persistResults() {
 }
 
 function parseProductUrl(url) {
-    const m = url ?.match(/\/([0-9a-f-]{36})\?item=([0-9a-f-]{36})/)
+    const m = url ?.match(/\/([0-9a-f-]{36})\?.tem=([0-9a-f-]{36})/)
     return m ? { merchantId: m[1], itemId: m[2] } : null
 }
 

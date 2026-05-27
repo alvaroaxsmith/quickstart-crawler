@@ -9,22 +9,39 @@ Extrai título, preços (normal e com desconto), URL e imagem de até 999 produt
 ### 1 — Setup (uma vez)
 
 ```bash
-git clone <url-do-repositorio>
-cd crawler-test-v2
+git clone https://github.com/alvaroaxsmith/quickstart-crawler.git
+cd quickstart-crawler
 npm run setup
 ```
 
 > `npm run setup` = `npm install` + `npm run build`
 
-### 2 — Abrir Chrome com CDP (terminal separado, manter aberto)
+### 2 — Gerar dados base (uma vez, se `data/products_output.json` não existir)
+
+A pipeline lê um JSON base com as URLs e faz split em grupos. Se o arquivo não existir, gere-o a partir do CSV:
+
+```bash
+node -e "
+const fs=require('fs');
+const lines=fs.readFileSync('input/urls.csv','utf8').trim().split(/\r?\n/);
+lines.shift(); // header
+const out=lines.filter(Boolean).map(u=>({product_url:u.trim(),title:''}));
+fs.writeFileSync('data/products_output.json',JSON.stringify(out,null,2));
+console.log('OK',out.length,'URLs');
+"
+```
+
+> A primeira execução cria automaticamente `data/groups/urls-{pao,carrefour,farmacia,all}.json` a partir desse JSON. Se já houver grupos preenchidos, são preservados (use `npm run crawl:reset` para regerá-los).
+
+### 3 — Abrir Chrome com CDP (terminal separado, manter aberto)
 
 ```bash
 npm run chrome
 ```
 
-> Isso abre o Google Chrome com porta CDP na `9222` apontando para o profile persistente (`fixtures/browser-profile/`) que já contém os cookies `cf_clearance` e `_px3` necessários.
+> Isso abre o Google Chrome com porta CDP na `9222` apontando para o profile persistente (`fixtures/browser-profile/`) que já contém os cookies `cf_clearance` e `_px3` necessários. **Não feche este terminal durante o crawl.**
 
-### 3 — Executar pipeline completa
+### 4 — Executar pipeline completa
 
 ```bash
 # Do zero (limpa cache + processa todos os 999 produtos)
@@ -113,10 +130,10 @@ docs/evidence/
 | `farmacia` | Farmácias diversas | 363 |
 | **Total** | | **999** |
 
-Os arquivos de grupo já estão em `data/groups/`. Para regerá-los a partir de `input/urls.csv`:
+Os arquivos de grupo são gerados automaticamente pela pipeline a partir de `data/products_output.json` (veja passo 2 do Quick Start). Para forçar a regeração:
 
 ```bash
-node scripts/px-batch-crawl.mjs --prepare-only
+npm run crawl:reset
 ```
 
 ---
@@ -189,19 +206,25 @@ A concorrência padrão é **3 workers**. Valores de 3–5 são recomendados.
 
 ## Taxa de Sucesso
 
+A taxa de sucesso é calculada e publicada pelo relatório:
+
 ```
 Taxa = produtos com normal_price preenchido / total de URLs
 ```
 
-- Pão de Açúcar e Farmácias: próximos de **100%**
-- Carrefour: **~85–90%** (alguns merchants têm PX mais rigoroso)
-- **Meta geral: ≥ 95%**
+Após a execução, consulte:
 
-Para maximizar a taxa do Carrefour após a execução principal:
+- [docs/evidence/report.md](docs/evidence/report.md) — dashboard human-readable
+- [docs/evidence/summary.json](docs/evidence/summary.json) — métricas estruturadas
+- `npm run report` — gera/atualiza os dois acima
+
+Para reprocessar apenas os itens que falharam:
 
 ```bash
 npm run crawl:retry
 ```
+
+**Meta do case: ≥ 95%.** Os números reais ficam disponíveis após a primeira execução completa.
 
 ---
 
@@ -211,6 +234,57 @@ npm run crawl:retry
 2. **Throughput limitado pelo PX solve** — ~12s por solve. Com 3 workers: ~8–12 itens/minuto.
 3. **Mouse exclusivo** — O solve PX usa o mouse físico. Não rodar duas instâncias em paralelo.
 4. **Sessão expira (~30 min)** — Se `cf_clearance` expirar, basta reabrir Chrome com `npm run chrome`.
+5. **Cobertura por endereço-âncora** — Lojas fora da área de entrega do endereço setado no profile não retornam preço (categorizadas como `OUT_OF_DELIVERY_AREA`).
+
+---
+
+## Troubleshooting
+
+**`SyntaxError: Unexpected string` / `Unexpected token ':'` em `scripts/*.mjs`**
+
+O formatador do VS Code pode transformar `??` em `?. ` e ternários `?` em `?.` nos arquivos `.mjs`. Para corrigir em massa:
+
+```bash
+perl -i -pe 's/\?\. /?? /g' scripts/*.mjs scripts/lib/*.mjs
+```
+
+Depois, inspecione ternários remanescentes (`expr ?.X : Y` → `expr ? X : Y`) com:
+
+```bash
+grep -nE '\?\.[^a-zA-Z_$\(\[]' scripts/*.mjs scripts/lib/*.mjs
+node --check scripts/run-all.mjs
+```
+
+**Para prevenir reincidência:** adicione `scripts/**/*.mjs` ao `.prettierignore` e desabilite "Format on Save" para esses arquivos no VS Code.
+
+**Profile expirou (`cf_clearance: ❌` no warm-up)**
+
+1. Encerre o processo aberto via `npm run chrome` (Ctrl+C no terminal dele).
+2. Reabra com `npm run chrome`.
+3. Navegue manualmente para https://www.ifood.com.br e resolva o Cloudflare/login até a home carregar normalmente.
+4. Retome `npm run crawl` — o resume automático pula o que já foi processado.
+
+**`❌ data/products_output.json não encontrado`**
+
+Rode o snippet do passo 2 do Quick Start.
+
+**Pipeline trava em "Verificando Chrome CDP"**
+
+Verifique se a porta 9222 está acessível: `curl http://127.0.0.1:9222/json/version`. Se não responder, o Chrome com CDP não está rodando — execute `npm run chrome` em outro terminal.
+
+---
+
+## Melhorias Futuras
+
+- **CAPTCHA solver pago como fallback automático** — integrar [CapSolver](https://capsolver.com) ou [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) (ADRs [0009](docs/adr/0009-capsolver-cloudflare-challenge.md) e [0010](docs/adr/0010-flaresolverr-free-alternative.md)) para remover dependência do solve manual via mouse físico e permitir paralelismo real entre máquinas.
+- **Proxy residencial rotativo** — distribuir o tráfego entre múltiplos IPs/sessões reduziria a frequência dos challenges PX (ver [ADR-0008](docs/adr/0008-residential-proxy.md)).
+- **Docker compose** — o case considera diferencial. Hoje a dependência de Chrome real + mouse no host impede containerização direta; uma alternativa seria um container com VNC + xdotool ou usar o solver pago acima para virar headless-friendly.
+- **Persistência em banco** — substituir os JSONs por SQLite/Postgres facilitaria queries e dashboards. A camada `ResultSink` já é uma porta hexagonal — basta um novo adapter.
+- **Observabilidade** — exportar métricas em formato Prometheus / OpenTelemetry; hoje as métricas vivem só no `summary.json`.
+- **Testes de integração com fixtures HTTP** — os 113 testes unitários cobrem domínio e adapters isolados; falta uma suíte que exercite a pipeline ponta-a-ponta com respostas iFood mockadas (sem depender de Chrome).
+- **CI** — pipeline GitHub Actions executando build + testes + lint a cada PR.
+- **Endereço-âncora configurável por execução** — permitir lista de endereços para cobrir lojas em regiões diferentes em uma única run.
+- **Retomada distribuída** — hoje o cache fica em `/tmp/px-batch-results.json` (local); migrar para Redis ou similar permitiria múltiplas máquinas dividindo o lote.
 
 ---
 

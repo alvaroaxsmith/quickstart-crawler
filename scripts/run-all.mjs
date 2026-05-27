@@ -58,20 +58,13 @@ function log(msg) { console.log(`[pipeline] ${msg}`) }
 function warn(msg) { console.warn(`[pipeline] ⚠️  ${msg}`) }
 
 /**
- * Corrige operadores ?? e ?. que formatadores como o built-in do VS Code podem
+ * Corrige operadores ?? e ?? que formatadores como o built-in do VS Code podem
  * corromper adicionando espaços (?? e ?.). Chamado imediatamente antes de cada
  * spawn para garantir que o arquivo está correto independente do estado no disco.
  */
-function fixScript(filePath) {
-    if (!existsSync(filePath)) return
-    let src = readFileSync(filePath, 'utf8')
-    const fixed = src
-        .replace(/\?./g, '??')
-        .replace(/\?./g, '?.')
-        .replace(/(\d) _(\d{3})/g, '$1_$2')
-    if (fixed !== src) {
-        writeFileSync(filePath, fixed)
-    }
+function fixScript(_filePath) {
+    // No-op: scripts já foram corrigidos manualmente. O auto-fix anterior tinha
+    // regexes ambíguos que corrompiam tanto `??` quanto ternários `?`.
 }
 
 /** Executa child process com saída em tempo real + gravação em logFile (append). */
@@ -88,8 +81,10 @@ function run(cmd, cmdArgs, { logFile, append = false } = {}) {
 
         child.stdout.on('data', write)
         child.stderr.on('data', writeErr)
-        child.on('close', (code) => { if (logStream) logStream.end();
-            res(code == null ? 0 : code) })
+        child.on('close', (code) => {
+            if (logStream) logStream.end();
+            res(code == null ? 0 : code)
+        })
     })
 }
 
