@@ -84,8 +84,9 @@ Após a execução, os arquivos ficam em:
 
 | Arquivo | Descrição |
 |---|---|
-| `data/products_output_enriched.json` | Dados completos (999 produtos) |
-| `data/products_output_enriched.csv` | Mesmos dados em CSV |
+| [data/products_output.json](data/products_output.json) | Base de entrada: URLs + título inicial (sem preço) |
+| [data/products_output_enriched.json](data/products_output_enriched.json) | Saída principal: 999 produtos com título, preços e status |
+| [data/products_output_enriched.csv](data/products_output_enriched.csv) | Mesma saída em CSV (Excel-friendly) |
 | [docs/evidence/report.md](docs/evidence/report.md) | Dashboard com métricas (human-readable) |
 | [docs/evidence/summary.json](docs/evidence/summary.json) | Métricas estruturadas (machine-readable) |
 | [docs/evidence/batch-pao.log](docs/evidence/batch-pao.log) | Log do grupo Pão de Açúcar |
