@@ -404,7 +404,7 @@ Sim. A SPA do iFood executa `window.location.reload()` internamente ao validar o
 
 - **CAPTCHA solver pago como fallback automático** — integrar [CapSolver](https://capsolver.com) ou [FlareSolverr](https://github.com/FlareSolverr/FlareSolverr) (ADRs [0009](docs/adr/0009-capsolver-cloudflare-challenge.md) e [0010](docs/adr/0010-flaresolverr-free-alternative.md)) para remover dependência do solve manual via mouse físico e permitir paralelismo real entre máquinas.
 - **Proxy residencial rotativo** — distribuir o tráfego entre múltiplos IPs/sessões reduziria a frequência dos challenges PX (ver [ADR-0008](docs/adr/0008-residential-proxy.md)).
-- **Persistência em banco** — substituir os JSONs por SQLite/Postgres facilitaria queries e dashboards. A camada `ResultSink` já é uma porta hexagonal — basta um novo adapter.
+- **Persistência em banco** — substituir os JSONs por SQLite/Postgres facilitaria queries e dashboards.
 - **Observabilidade** — exportar métricas em formato Prometheus / OpenTelemetry; hoje as métricas vivem só no `summary.json`.
 - **Testes de integração com fixtures HTTP** — os 113 testes unitários cobrem domínio e adapters isolados; falta uma suíte que exercite a pipeline ponta-a-ponta com respostas iFood mockadas (sem depender de Chrome).
 - **CI** — pipeline GitHub Actions executando build + testes + lint a cada PR.

@@ -1,6 +1,6 @@
 # Relatório de Execução — Crawler iFood
 
-> **Gerado em:** 2026-05-27T15:27:35.450Z
+> **Gerado em:** 2026-05-27T21:20:39.883Z
 > **Fonte:** `/Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json`
 
 ---
@@ -10,15 +10,15 @@
 | Métrica | Valor |
 |---|---|
 | Total de URLs processadas | **999** |
-| Produtos com preço capturado | **641** |
-| Falhas | **358** |
-| **Taxa de sucesso** | **64.2%** |
+| Produtos com preço capturado | **560** |
+| Falhas | **439** |
+| **Taxa de sucesso** | **56.1%** |
 | Meta ≥ 95% | ❌ NÃO ATINGIDA |
-| Tempo total de execução | 896m 33s |
+| Tempo total de execução | 3468m 55s |
 
 ```
-Sucesso  [███████████████████░░░░░░░░░░░] 64.2%
-Falha    [███████████░░░░░░░░░░░░░░░░░░░] 35.8%
+Sucesso  [█████████████████░░░░░░░░░░░░░] 56.1%
+Falha    [█████████████░░░░░░░░░░░░░░░░░] 43.9%
 ```
 
 ---
@@ -27,9 +27,9 @@ Falha    [███████████░░░░░░░░░░░░�
 
 | Grupo | Total | Sucesso | Falha | Taxa | Tempo |
 |---|---|---|---|---|---|
-| Carrefour | 368 | 228 | 140 | 62.0% | 257m 17s |
-| Farmácias | 363 | 235 | 128 | 64.7% | 300m 47s |
-| Pão de Açúcar | 215 | 178 | 37 | 82.8% | 338m 29s |
+| Carrefour | 368 | 201 | 167 | 54.6% | 1115m 54s |
+| Farmácias | 363 | 225 | 138 | 62.0% | 1161m 37s |
+| Pão de Açúcar | 215 | 134 | 81 | 62.3% | 1191m 24s |
 | Outros | 53 | 0 | 53 | 0.0% | – |
 
 ---
@@ -38,10 +38,10 @@ Falha    [███████████░░░░░░░░░░░░�
 
 | Métrica | Valor |
 |---|---|
-| Preço mínimo | R$ 4,63 |
+| Preço mínimo | R$ 4,71 |
 | Preço máximo | R$ 301,99 |
-| Preço médio | R$ 35,16 |
-| Mediana de preço | R$ 23,10 |
+| Preço médio | R$ 36,65 |
+| Mediana de preço | R$ 25,95 |
 | Produtos com desconto | 0 (0.0%) |
 | Desconto médio | – |
 
@@ -57,10 +57,10 @@ Falha    [███████████░░░░░░░░░░░░�
 
 | Campo | Preenchido | % | Cobertura |
 |---|---|---|---|
-| `title` | 641 / 999 | 64.2% | ██████████░░░░░ |
-| `normal_price` | 641 / 999 | 64.2% | ██████████░░░░░ |
+| `title` | 560 / 999 | 56.1% | ████████░░░░░░░ |
+| `normal_price` | 560 / 999 | 56.1% | ████████░░░░░░░ |
 | `discount_price` | 0 / 999 | 0.0% | ░░░░░░░░░░░░░░░ |
-| `image_url` | 0 / 999 | 0.0% | ░░░░░░░░░░░░░░░ |
+| `image_url` | 560 / 999 | 56.1% | ████████░░░░░░░ |
 
 ---
 
@@ -68,8 +68,8 @@ Falha    [███████████░░░░░░░░░░░░�
 
 | Mensagem | Ocorrências | % dos Erros |
 |---|---|---|
-| UNAVAILABLE: produto indisponível (fora da área de entrega ou bloqueio temporário) | 305 | 85.2% |
-| DEACTIVATED: loja desativada no iFood (URL inativa) | 53 | 14.8% |
+| UNAVAILABLE: produto indisponível (fora da área de entrega ou bloqueio temporário) | 386 | 87.9% |
+| DEACTIVATED: loja desativada no iFood (URL inativa) | 53 | 12.1% |
 
 ---
 

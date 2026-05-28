@@ -1,60 +1,60 @@
 {
-  "generated_at": "2026-05-27T15:27:35.444Z",
+  "generated_at": "2026-05-27T21:20:39.867Z",
   "source_file": "/Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json",
   "execution_time": {
     "by_group": {
-      "pao": "338m 29s",
-      "carrefour": "257m 17s",
-      "farmacia": "300m 47s"
+      "pao": "1191m 24s",
+      "carrefour": "1115m 54s",
+      "farmacia": "1161m 37s"
     },
-    "total": "896m 33s"
+    "total": "3468m 55s"
   },
   "totals": {
     "total_urls": 999,
-    "success": 641,
-    "errors": 358,
-    "success_rate_pct": 64.16,
+    "success": 560,
+    "errors": 439,
+    "success_rate_pct": 56.06,
     "meets_95pct_target": false
   },
   "price_stats": {
-    "min": "R$ 4,63",
+    "min": "R$ 4,71",
     "max": "R$ 301,99",
-    "avg": "R$ 35,16",
-    "median": "R$ 23,10",
+    "avg": "R$ 36,65",
+    "median": "R$ 25,95",
     "with_discount": 0,
     "with_discount_pct": 0,
     "avg_discount_pct": null
   },
   "field_coverage": {
     "title": {
-      "count": 641,
-      "pct": 64.16
+      "count": 560,
+      "pct": 56.06
     },
     "normal_price": {
-      "count": 641,
-      "pct": 64.16
+      "count": 560,
+      "pct": 56.06
     },
     "discount_price": {
       "count": 0,
       "pct": 0
     },
     "image_url": {
-      "count": 0,
-      "pct": 0
+      "count": 560,
+      "pct": 56.06
     }
   },
   "by_group": {
     "pao": {
       "total": 215,
-      "success": 178,
-      "error": 37,
-      "rate_pct": 82.79
+      "success": 134,
+      "error": 81,
+      "rate_pct": 62.33
     },
     "carrefour": {
       "total": 368,
-      "success": 228,
-      "error": 140,
-      "rate_pct": 61.96
+      "success": 201,
+      "error": 167,
+      "rate_pct": 54.62
     },
     "unknown": {
       "total": 53,
@@ -64,13 +64,13 @@
     },
     "farmacia": {
       "total": 363,
-      "success": 235,
-      "error": 128,
-      "rate_pct": 64.74
+      "success": 225,
+      "error": 138,
+      "rate_pct": 61.98
     }
   },
   "error_breakdown": {
-    "UNAVAILABLE: produto indisponível (fora da área de entrega ou bloqueio temporário)": 305,
+    "UNAVAILABLE: produto indisponível (fora da área de entrega ou bloqueio temporário)": 386,
     "DEACTIVATED: loja desativada no iFood (URL inativa)": 53
   },
   "sample_discounted": []

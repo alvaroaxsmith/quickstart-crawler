@@ -3,701 +3,1286 @@
 [batch] warm-up OK | cf_clearance: ✅ | _px3: ✅
 [batch] 3 workers (abas) prontos
 
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 3/215] ✅                                  | R$ 55.90
-[W1][rodada-1 3/215] ✅                                  | R$ 31.99
-[W1][rodada-1 5/215] ❌                                  | status=200
-[W2][rodada-1 5/215] ✅                                  | R$ 4.89
-[W3][rodada-1 5/215] ❌                                  | status=200
-[W1][rodada-1 8/215] ❌                                  | status=200
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9994ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9994ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 3/215] ❌                                  | status=403
+[W3][rodada-1 3/215] ❌                                  | status=403
+[W1][rodada-1 3/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (8305ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 8305ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 6/215] ❌                                  | status=403
+[W1][rodada-1 6/215] ❌                                  | status=403
+[W2][rodada-1 6/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9348ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9348ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 9/215] ❌                                  | status=403
 [W3][rodada-1 9/215] ❌                                  | status=403
 [W1][rodada-1 9/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][rodada-1 11/215] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: mouse.up apos 15016ms (max-hold atingido)
+  [W1][PX] PX: modal ainda presente apos todas as tentativas
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
 [W1][rodada-1 12/215] ❌                                  | status=403
-[W2][rodada-1 12/215] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][rodada-1 14/215] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 15/215] ✅                                  | R$ 37.99
-[W2][rodada-1 15/215] ✅                                  | R$ 15.49
-[W1][rodada-1 15/215] ✅                                  | R$ 21.99
-[W1][rodada-1 18/215] ❌                                  | status=200
-[W2][rodada-1 18/215] ✅                                  | R$ 8.29
-[W3][rodada-1 18/215] ✅                                  | R$ 36.99
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W3][rodada-1 13/215] ❌                                  | status=403
+[W2][rodada-1 13/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9600ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9600ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 15/215] ❌                                  | status=403
+[W2][rodada-1 15/215] ❌                                  | status=403
+[W1][rodada-1 15/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6596ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6596ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 18/215] ❌                                  | status=403
+[W3][rodada-1 18/215] ❌                                  | status=403
+[W2][rodada-1 18/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6143ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6143ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 21/215] ❌                                  | status=403
 [W1][rodada-1 21/215] ❌                                  | status=403
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][rodada-1 22/215] ❌                                  | status=403
-[W2][rodada-1 22/215] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 24/215] ✅                                  | R$ 44.99
-[W3][rodada-1 24/215] ✅                                  | R$ 22.99
-[W1][rodada-1 26/215] ❌                                  | status=200
-[W2][rodada-1 27/215] ✅                                  | R$ 128.99
-[W3][rodada-1 27/215] ✅                                  | R$ 13.99
-[W1][rodada-1 29/215] ❌                                  | status=200
-[W3][rodada-1 30/215] ✅                                  | R$ 79.90
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 31/215] ❌                                  | status=403
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][rodada-1 32/215] ❌                                  | status=403
-[W3][rodada-1 32/215] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 34/215] ❌                                  | status=403
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][rodada-1 35/215] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+[W2][rodada-1 21/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9788ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9788ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 24/215] ❌                                  | status=403
+[W2][rodada-1 24/215] ❌                                  | status=403
+[W3][rodada-1 24/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (9700ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 9700ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 27/215] ❌                                  | status=403
+[W2][rodada-1 27/215] ❌                                  | status=403
+[W1][rodada-1 27/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (8300ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 8300ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 30/215] ✅                                  | R$ 18.99
+[W3][rodada-1 30/215] ✅                                  | R$ 15.99
+[W1][rodada-1 30/215] ✅                                  | R$ 79.90
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6075ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6075ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 33/215] ✅                                  | R$ 23.99
+[W3][rodada-1 33/215] ✅                                  | R$ 18.99
+[W1][rodada-1 33/215] ✅                                  | R$ 32.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6052ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6052ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 36/215] ❌                                  | status=403
 [W1][rodada-1 36/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 37/215] ✅                                  | R$ 14.99
-[W3][rodada-1 37/215] ✅                                  | R$ 25.99
-[W1][rodada-1 37/215] ✅                                  | R$ 17.49
-[W1][rodada-1 40/215] ✅                                  | R$ 18.49
-[W2][rodada-1 40/215] ✅                                  | R$ 11.99
-[W3][rodada-1 40/215] ✅                                  | R$ 17.49
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 43/215] ✅                                  | R$ 33.99
-[W1][rodada-1 43/215] ✅                                  | R$ 25.99
-[W2][rodada-1 43/215] ✅                                  | R$ 14.99
-[W3][rodada-1 46/215] ✅                                  | R$ 17.99
-[W1][rodada-1 46/215] ✅                                  | R$ 17.49
-[W2][rodada-1 46/215] ✅                                  | R$ 22.99
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 49/215] ✅                                  | R$ 14.99
-[W2][rodada-1 49/215] ✅                                  | R$ 69.90
-[W1][rodada-1 49/215] ✅                                  | R$ 62.99
-[W3][rodada-1 52/215] ✅                                  | R$ 6.99
-[W2][rodada-1 52/215] ✅                                  | R$ 6.79
-[W1][rodada-1 52/215] ✅                                  | R$ 21.99
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 55/215] ✅                                  | R$ 4.99
-[W1][rodada-1 55/215] ✅                                  | R$ 19.49
-[W3][rodada-1 55/215] ✅                                  | R$ 26.99
-[W2][rodada-1 58/215] ❌                                  | status=200
-[W3][rodada-1 58/215] ✅                                  | R$ 65.90
-[W1][rodada-1 58/215] ✅                                  | R$ 52.90
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 61/215] ❌                                  | status=403
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
+[W2][rodada-1 36/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6008ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6008ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 39/215] ✅                                  | R$ 11.99
+[W2][rodada-1 39/215] ✅                                  | R$ 18.49
+[W1][rodada-1 41/215] ✅                                  | R$ 17.49
+[W1][rodada-1 42/215] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6028ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6028ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 43/215] ❌                                  | status=403
+[W2][rodada-1 43/215] ❌                                  | status=403
+[W1][rodada-1 43/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (7740ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 7740ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 46/215] ✅                                  | R$ 17.99
+[W2][rodada-1 46/215] ✅                                  | R$ 17.49
+[W3][rodada-1 46/215] ✅                                  | R$ 22.99
+[W1][rodada-1 49/215] ✅                                  | R$ 14.99
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (9490ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 9490ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 50/215] ❌                                  | status=403
+[W3][rodada-1 50/215] ❌                                  | status=403
+[W1][rodada-1 50/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6825ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6825ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 53/215] ❌                                  | status=403
+[W3][rodada-1 53/215] ❌                                  | status=403
+[W1][rodada-1 53/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6115ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6115ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 56/215] ❌                                  | status=403
+[W2][rodada-1 56/215] ❌                                  | status=403
+[W1][rodada-1 56/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6095ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6095ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 59/215] ❌                                  | status=403
+[W3][rodada-1 59/215] ❌                                  | status=403
+[W2][rodada-1 59/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6007ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6007ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
 [W3][rodada-1 62/215] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-[W1][rodada-1 63/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 64/215] ❌                                  | status=403
+[W2][rodada-1 62/215] ❌                                  | status=403
+[W1][rodada-1 62/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (9563ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 9563ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
 [W1][rodada-1 65/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][rodada-1 66/215] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 67/215] ✅                                  | R$ 31.99
-[W1][rodada-1 67/215] ✅                                  | R$ 44.99
-[W2][rodada-1 67/215] ✅                                  | R$ 17.49
-[W3][rodada-1 70/215] ✅                                  | R$ 14.49
-[W2][rodada-1 70/215] ❌                                  | status=200
-[W1][rodada-1 70/215] ✅                                  | R$ 39.99
-[W3][rodada-1 73/215] ✅                                  | R$ 17.99
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][rodada-1 74/215] ❌                                  | status=403
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][rodada-1 75/215] ❌                                  | status=403
-[W2][rodada-1 75/215] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 77/215] ✅                                  | R$ 62.99
-[W1][rodada-1 77/215] ✅                                  | R$ 19.49
-[W2][rodada-1 77/215] ✅                                  | R$ 43.99
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 80/215] ✅                                  | R$ 6.79
-[W3][rodada-1 80/215] ✅                                  | R$ 6.99
-[W1][rodada-1 80/215] ✅                                  | R$ 17.49
-[W3][rodada-1 83/215] ✅                                  | R$ 21.99
-[W2][rodada-1 83/215] ✅                                  | R$ 43.99
-[W1][rodada-1 83/215] ✅                                  | R$ 8.29
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 86/215] ✅                                  | R$ 25.99
-[W2][rodada-1 86/215] ✅                                  | R$ 21.99
-[W1][rodada-1 86/215] ✅                                  | R$ 8.99
-[W3][rodada-1 89/215] ✅                                  | R$ 39.99
-[W1][rodada-1 89/215] ✅                                  | R$ 6.99
-[W2][rodada-1 89/215] ✅                                  | R$ 5.79
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 92/215] ❌                                  | status=403
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][rodada-1 93/215] ❌                                  | status=403
-[W2][rodada-1 93/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 95/215] ✅                                  | R$ 36.99
-[W1][rodada-1 95/215] ✅                                  | R$ 40.99
-[W3][rodada-1 97/215] ✅                                  | R$ 18.49
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][rodada-1 98/215] ❌                                  | status=200
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][rodada-1 99/215] ✅                                  | R$ 14.99
-[W2][rodada-1 99/215] ✅                                  | R$ 14.49
-[W3][rodada-1 99/215] ✅                                  | R$ 36.99
-[W1][rodada-1 102/215] ✅                                  | R$ 17.49
-[W3][rodada-1 102/215] ✅                                  | R$ 43.99
-[W2][rodada-1 102/215] ✅                                  | R$ 20.99
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 105/215] ✅                                  | R$ 7.49
-[W3][rodada-1 105/215] ✅                                  | R$ 13.99
-[W1][rodada-1 107/215] ❌                                  | status=200
-[W2][rodada-1 108/215] ✅                                  | R$ 8.49
-[W3][rodada-1 108/215] ❌                                  | status=200
-[W1][rodada-1 110/215] ❌                                  | status=200
-[W3][rodada-1 110/215] ✅                                  | R$ 6.79
-[W2][rodada-1 110/215] ❌                                  | status=200
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 113/215] ✅                                  | R$ 20.99
-[W1][rodada-1 113/215] ✅                                  | R$ 20.99
-[W2][rodada-1 113/215] ✅                                  | R$ 13.49
-[W1][rodada-1 116/215] ❌                                  | status=200
-[W2][rodada-1 116/215] ✅                                  | R$ 22.99
-[W3][rodada-1 116/215] ✅                                  | R$ 10.49
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 119/215] ❌                                  | status=403
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][rodada-1 120/215] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
+[W2][rodada-1 65/215] ❌                                  | status=403
+[W3][rodada-1 65/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6661ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6661ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 68/215] ✅                                  | R$ 44.99
+[W3][rodada-1 68/215] ✅                                  | R$ 17.49
+[W2][rodada-1 68/215] ✅                                  | R$ 14.49
+[W1][rodada-1 71/215] ✅                                  | R$ 39.99
+[W3][rodada-1 72/215] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6028ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6028ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 73/215] ✅                                  | R$ 17.99
+[W3][rodada-1 73/215] ✅                                  | R$ 28.99
+[W1][rodada-1 73/215] ✅                                  | R$ 32.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (8627ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 8627ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 76/215] ❌                                  | status=403
+[W1][rodada-1 76/215] ❌                                  | status=403
+[W2][rodada-1 76/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6060ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6060ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 79/215] ❌                                  | status=403
+[W3][rodada-1 79/215] ❌                                  | status=403
+[W1][rodada-1 79/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (8824ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 8824ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 82/215] ❌                                  | status=403
+[W3][rodada-1 82/215] ❌                                  | status=403
+[W1][rodada-1 82/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6047ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6047ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 85/215] ❌                                  | status=403
+[W2][rodada-1 85/215] ❌                                  | status=403
+[W3][rodada-1 85/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6117ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6117ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 88/215] ❌                                  | status=403
+[W3][rodada-1 88/215] ❌                                  | status=403
+[W1][rodada-1 88/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (7217ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 7217ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 91/215] ❌                                  | status=403
+[W3][rodada-1 91/215] ❌                                  | status=403
+[W1][rodada-1 91/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6119ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6119ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 94/215] ✅                                  | R$ 8.49
+[W2][rodada-1 94/215] ✅                                  | R$ 36.99
+[W3][rodada-1 96/215] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6094ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6094ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 97/215] ❌                                  | status=403
+[W1][rodada-1 97/215] ❌                                  | status=403
+[W2][rodada-1 97/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6097ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6097ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 100/215] ❌                                  | status=403
+[W3][rodada-1 100/215] ❌                                  | status=403
+[W2][rodada-1 100/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (7129ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 7129ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 103/215] ❌                                  | status=403
+[W3][rodada-1 103/215] ❌                                  | status=403
+[W2][rodada-1 103/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6196ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6196ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 106/215] ❌                                  | status=403
+[W3][rodada-1 106/215] ❌                                  | status=403
+[W1][rodada-1 106/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (8116ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 8116ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 109/215] ❌                                  | status=403
+[W3][rodada-1 109/215] ❌                                  | status=403
+[W1][rodada-1 109/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6026ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6026ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 112/215] ✅                                  | R$ 20.99
+[W2][rodada-1 112/215] ✅                                  | R$ 20.99
+[W1][rodada-1 114/215] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6004ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6004ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 115/215] ✅                                  | R$ 13.49
+[W1][rodada-1 115/215] ✅                                  | R$ 10.49
+[W2][rodada-1 117/215] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6035ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6035ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 118/215] ❌                                  | status=403
+[W2][rodada-1 118/215] ❌                                  | status=403
+[W3][rodada-1 118/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (9897ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 9897ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 121/215] ❌                                  | status=403
 [W1][rodada-1 121/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][rodada-1 122/215] ❌                                  | status=403
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][rodada-1 123/215] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
+[W3][rodada-1 121/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6062ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6062ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 124/215] ❌                                  | status=403
 [W2][rodada-1 124/215] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 125/215] ✅                                  | R$ 95.90
-[W1][rodada-1 125/215] ✅                                  | R$ 18.99
-[W2][rodada-1 125/215] ✅                                  | R$ 15.49
-[W2][rodada-1 128/215] ✅                                  | R$ 31.99
-[W3][rodada-1 128/215] ❌                                  | status=200
-[W1][rodada-1 128/215] ✅                                  | R$ 26.99
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][rodada-1 131/215] ✅                                  | R$ 37.99
-[W2][rodada-1 131/215] ✅                                  | R$ 65.90
-[W1][rodada-1 133/215] ✅                                  | R$ 13.99
-[W2][rodada-1 133/215] ✅                                  | R$ 15.49
-[W1][rodada-1 135/215] ✅                                  | R$ 11.49
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][rodada-1 136/215] ❌                                  | status=200
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 137/215] ✅                                  | R$ 14.99
-[W1][rodada-1 137/215] ✅                                  | R$ 21.99
-[W2][rodada-1 137/215] ✅                                  | R$ 41.99
-[W2][rodada-1 140/215] ✅                                  | R$ 11.99
-[W3][rodada-1 140/215] ✅                                  | R$ 17.99
-[W1][rodada-1 140/215] ✅                                  | R$ 11.49
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 143/215] ✅                                  | R$ 62.99
-[W1][rodada-1 143/215] ✅                                  | R$ 15.49
-[W3][rodada-1 143/215] ✅                                  | R$ 18.99
-[W2][rodada-1 146/215] ✅                                  | R$ 17.49
-[W3][rodada-1 146/215] ✅                                  | R$ 36.99
-[W1][rodada-1 146/215] ❌                                  | status=200
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 149/215] ✅                                  | R$ 59.90
-[W1][rodada-1 149/215] ✅                                  | R$ 8.79
-[W3][rodada-1 149/215] ✅                                  | R$ 85.90
-[W1][rodada-1 152/215] ❌                                  | status=200
-[W3][rodada-1 152/215] ✅                                  | R$ 5.79
-[W2][rodada-1 152/215] ✅                                  | R$ 11.49
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 155/215] ✅                                  | R$ 6.49
-[W2][rodada-1 155/215] ✅                                  | R$ 5.79
-[W1][rodada-1 155/215] ✅                                  | R$ 16.49
-[W3][rodada-1 158/215] ✅                                  | R$ 14.99
-[W1][rodada-1 158/215] ✅                                  | R$ 19.49
-[W2][rodada-1 158/215] ✅                                  | R$ 14.49
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-[W1][rodada-1 161/215] ✅                                  | R$ 69.90
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][rodada-1 162/215] ✅                                  | R$ 24.99
-[W3][rodada-1 162/215] ✅                                  | R$ 59.90
-[W1][rodada-1 164/215] ✅                                  | R$ 22.99
-[W3][rodada-1 164/215] ✅                                  | R$ 17.99
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][rodada-1 166/215] ❌                                  | status=200
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][rodada-1 167/215] ✅                                  | R$ 23.99
-[W2][rodada-1 167/215] ✅                                  | R$ 21.99
+[W1][rodada-1 124/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (7275ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 7275ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 127/215] ❌                                  | status=403
+[W3][rodada-1 127/215] ❌                                  | status=403
+[W2][rodada-1 127/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6105ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6105ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 130/215] ✅                                  | R$ 37.99
+[W2][rodada-1 130/215] ✅                                  | R$ 65.90
+[W3][rodada-1 130/215] ✅                                  | R$ 31.99
+[W2][rodada-1 133/215] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6142ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6142ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 134/215] ❌                                  | status=403
+[W2][rodada-1 134/215] ❌                                  | status=403
+[W3][rodada-1 134/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6109ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6109ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 137/215] ❌                                  | status=403
+[W3][rodada-1 137/215] ❌                                  | status=403
+[W2][rodada-1 137/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9238ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9238ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 140/215] ✅                                  | R$ 11.49
+[W3][rodada-1 140/215] ✅                                  | R$ 11.99
+[W1][rodada-1 140/215] ✅                                  | R$ 17.99
+[W3][rodada-1 143/215] ✅                                  | R$ 15.49
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: botao removido durante hold (6001ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6001ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 144/215] ❌                                  | status=403
+[W3][rodada-1 144/215] ❌                                  | status=403
+[W2][rodada-1 144/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (8058ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 8058ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 147/215] ✅                                  | R$ 59.90
+[W1][rodada-1 147/215] ✅                                  | R$ 36.99
+[W3][rodada-1 149/215] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6069ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6069ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 150/215] ✅                                  | R$ 11.49
+[W1][rodada-1 150/215] ✅                                  | R$ 85.90
+[W2][rodada-1 150/215] ✅                                  | R$ 8.79
+[W3][rodada-1 153/215] ✅                                  | R$ 33.99
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (7871ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 7871ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 154/215] ❌                                  | status=403
+[W1][rodada-1 154/215] ❌                                  | status=403
+[W2][rodada-1 154/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (9392ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 9392ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 157/215] ❌                                  | status=403
+[W1][rodada-1 157/215] ❌                                  | status=403
+[W2][rodada-1 157/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6119ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6119ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 160/215] ❌                                  | status=403
+[W1][rodada-1 160/215] ❌                                  | status=403
+[W2][rodada-1 160/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6117ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6117ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 163/215] ❌                                  | status=403
+[W3][rodada-1 163/215] ❌                                  | status=403
+[W2][rodada-1 163/215] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (7335ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 7335ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 166/215] ❌                                  | status=403
+[W2][rodada-1 166/215] ❌                                  | status=403
+[W1][rodada-1 166/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6042ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6042ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 169/215] ✅                                  | R$ 33.99
+[W1][rodada-1 169/215] ✅                                  | R$ 21.99
 [W2][rodada-1 169/215] ✅                                  | R$ 11.49
-[W1][rodada-1 169/215] ✅                                  | R$ 33.99
-[W3][rodada-1 169/215] ❌                                  | status=200
-[W2][rodada-1 172/215] ✅                                  | R$ 6.79
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
+[W1][rodada-1 172/215] ✅                                  | R$ 6.79
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: botao removido durante hold (6030ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6030ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
 [W1][rodada-1 173/215] ❌                                  | status=403
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][rodada-1 174/215] ❌                                  | status=403
-[W2][rodada-1 174/215] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 176/215] ✅                                  | R$ 16.49
-[W3][rodada-1 177/215] ❌                                  | status=200
-[W3][rodada-1 178/215] ✅                                  | R$ 14.99
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][rodada-1 179/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-[W2][rodada-1 180/215] ❌                                  | status=200
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 181/215] ✅                                  | R$ 10.49
-[W1][rodada-1 181/215] ✅                                  | R$ 15.49
-[W3][rodada-1 181/215] ✅                                  | R$ 19.49
-[W3][rodada-1 184/215] ❌                                  | status=200
-[W2][rodada-1 184/215] ❌                                  | status=200
-[W1][rodada-1 184/215] ✅                                  | R$ 15.49
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 187/215] ✅                                  | R$ 14.49
-[W2][rodada-1 187/215] ✅                                  | R$ 75.90
-[W1][rodada-1 187/215] ✅                                  | R$ 10.99
-[W2][rodada-1 190/215] ✅                                  | R$ 32.99
-[W3][rodada-1 190/215] ✅                                  | R$ 25.99
-[W1][rodada-1 190/215] ✅                                  | R$ 21.99
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 193/215] ❌                                  | status=403
-[W1][rodada-1 193/215] ❌                                  | status=403
-[W2][rodada-1 195/215] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][rodada-1 196/215] ✅                                  | R$ 20.99
-[W2][rodada-1 196/215] ✅                                  | R$ 31.99
-[W3][rodada-1 198/215] ✅                                  | R$ 20.99
-[W2][rodada-1 198/215] ❌                                  | status=200
-[W3][rodada-1 200/215] ✅                                  | R$ 13.99
-[W2][rodada-1 200/215] ✅                                  | R$ 15.99
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][rodada-1 202/215] ❌                                  | status=200
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 203/215] ✅                                  | R$ 13.99
-[W3][rodada-1 203/215] ✅                                  | R$ 11.99
-[W1][rodada-1 203/215] ✅                                  | R$ 4.79
+[W3][rodada-1 173/215] ❌                                  | status=403
+[W2][rodada-1 173/215] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (9445ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 9445ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 176/215] ❌                                  | status=403
+[W1][rodada-1 176/215] ❌                                  | status=403
+[W2][rodada-1 176/215] ❌                                  | status=403
+[W2][rodada-1 179/215] ✅                                  | R$ 14.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: botao removido durante hold (6129ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6129ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 180/215] ❌                                  | status=403
+[W2][rodada-1 180/215] ❌                                  | status=403
+[W3][rodada-1 180/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6149ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6149ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 183/215] ✅                                  | R$ 10.49
+[W3][rodada-1 183/215] ✅                                  | R$ 15.49
+[W1][rodada-1 185/215] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6113ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6113ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 186/215] ❌                                  | status=403
+[W1][rodada-1 186/215] ❌                                  | status=403
+[W3][rodada-1 186/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6129ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6129ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 189/215] ✅                                  | R$ 10.99
+[W1][rodada-1 189/215] ✅                                  | R$ 25.99
+[W2][rodada-1 189/215] ✅                                  | R$ 32.99
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6009ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6009ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 192/215] ✅                                  | R$ 21.99
+[W3][rodada-1 192/215] ✅                                  | R$ 44.99
+[W1][rodada-1 192/215] ✅                                  | R$ 20.99
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6097ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6097ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 195/215] ✅                                  | R$ 20.99
+[W2][rodada-1 195/215] ✅                                  | R$ 37.99
+[W1][rodada-1 197/215] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6093ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6093ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][rodada-1 198/215] ❌                                  | status=403
+[W1][rodada-1 198/215] ❌                                  | status=403
+[W2][rodada-1 198/215] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6668ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6668ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 201/215] ✅                                  | R$ 15.99
+[W3][rodada-1 201/215] ✅                                  | R$ 13.99
+[W1][rodada-1 201/215] ✅                                  | R$ 11.99
+[W1][rodada-1 204/215] ✅                                  | R$ 43.99
+[W3][rodada-1 204/215] ✅                                  | R$ 4.79
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6005ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6005ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
 [W1][rodada-1 206/215] ✅                                  | R$ 27.99
-[W2][rodada-1 206/215] ✅                                  | R$ 43.99
 [W3][rodada-1 206/215] ✅                                  | R$ 12.49
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][rodada-1 209/215] ✅                                  | R$ 18.99
-[W3][rodada-1 209/215] ✅                                  | R$ 14.99
-[W1][rodada-1 209/215] ✅                                  | R$ 49.99
+[W2][rodada-1 206/215] ✅                                  | R$ 13.99
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6176ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6176ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][rodada-1 209/215] ✅                                  | R$ 49.99
+[W1][rodada-1 209/215] ✅                                  | R$ 18.99
+[W3][rodada-1 209/215] ✅                                  | R$ 15.99
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (8662ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 8662ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][rodada-1 212/215] ✅                                  | R$ 18.99
+[W3][rodada-1 212/215] ✅                                  | R$ 7.29
 [W2][rodada-1 212/215] ✅                                  | R$ 36.99
-[W3][rodada-1 212/215] ✅                                  | R$ 18.99
-[W1][rodada-1 212/215] ✅                                  | R$ 7.29
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][rodada-1 215/215] ✅                                  | R$ 65.90
-[W3][rodada-1 215/215] ✅                                  | R$ 14.49
-[W2][rodada-1 215/215] ✅                                  | R$ 12.99
+[W1][rodada-1 215/215] ✅                                  | R$ 12.99
+[W3][rodada-1 215/215] ✅                                  | R$ 65.90
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6118ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6118ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+[W2][rodada-1 215/215] ✅                                  | R$ 14.49
 
-[batch] rodada-1 concluída: ✅ 149 | ❌ 66 | total 215/215
+[batch] rodada-1 concluída: ✅ 71 | ❌ 144 | total 215/215
 
-[batch] Retry automático: 66 itens que falharam...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][retry 3/66] ❌                                  | status=403
-[W2][retry 3/66] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][retry 5/66] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][retry 6/66] ✅                                  | R$ 12.49
-[W3][retry 6/66] ✅                                  | R$ 8.49
-[W1][retry 6/66] ✅                                  | R$ 9.29
-[W3][retry 9/66] ✅                                  | R$ 24.99
-[W1][retry 9/66] ✅                                  | R$ 39.99
-[W2][retry 11/66] ✅                                  | R$ 19.49
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][retry 12/66] ✅                                  | R$ 17.49
-[W1][retry 13/66] ❌                                  | status=200
-[W1][retry 14/66] ❌                                  | status=200
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][retry 15/66] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-[W2][retry 16/66] ❌                                  | status=200
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][retry 17/66] ✅                                  | R$ 18.99
-[W3][retry 17/66] ✅                                  | R$ 14.99
-[W2][retry 19/66] ✅                                  | R$ 20.99
-[W3][retry 20/66] ✅                                  | R$ 23.99
-[W2][retry 21/66] ✅                                  | R$ 32.99
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][retry 22/66] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][retry 23/66] ✅                                  | R$ 18.99
-[W1][retry 23/66] ✅                                  | R$ 35.99
-[W3][retry 25/66] ✅                                  | R$ 36.99
-[W1][retry 25/66] ✅                                  | R$ 7.49
-[W1][retry 27/66] ✅                                  | R$ 14.99
-[W3][retry 27/66] ✅                                  | R$ 11.49
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][retry 29/66] ❌                                  | status=200
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][retry 30/66] ❌                                  | status=403
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][retry 31/66] ❌                                  | status=403
-[W2][retry 31/66] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][retry 33/66] ❌                                  | status=403
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][retry 34/66] ❌                                  | status=403
-[W2][retry 34/66] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][retry 36/66] ❌                                  | status=403
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][retry 37/66] ❌                                  | status=403
-[W2][retry 37/66] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][retry 39/66] ❌                                  | status=200
-  [W1][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][retry 40/66] ❌                                  | status=200
-[W2][retry 40/66] ❌                                  | status=200
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: mouse.up
-  [W1][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][retry 42/66] ✅                                  | R$ 5.79
-[W2][retry 43/66] ✅                                  | R$ 26.99
-[W2][retry 44/66] ✅                                  | R$ 9.29
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][retry 45/66] ❌                                  | status=403
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-[W3][retry 46/66] ❌                                  | status=200
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W1][retry 47/66] ✅                                  | R$ 69.90
-[W3][retry 47/66] ✅                                  | R$ 12.49
-[W3][retry 49/66] ❌                                  | status=200
-[W1][retry 49/66] ❌                                  | status=200
-[W3][retry 51/66] ❌                                  | status=200
-[W1][retry 52/66] ❌                                  | status=200
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][retry 53/66] ❌                                  | status=403
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][retry 54/66] ✅                                  | R$ 35.99
-[W2][retry 55/66] ✅                                  | R$ 6.99
-[W3][retry 56/66] ❌                                  | status=200
-[W2][retry 57/66] ✅                                  | R$ 11.99
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W1][retry 58/66] ❌                                  | status=200
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W3][retry 59/66] ❌                                  | status=200
-  [W3][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W2][retry 60/66] ❌                                  | status=200
-[W1][retry 60/66] ❌                                  | status=200
-  [W2][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W1][PX] PX: outro worker resolvendo — aguardando cookie...
-  [W3][PX] PX: mouse.up
-  [W3][PX] PX: resolvido (botão removido)
-  [W2][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-  [W1][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][retry 62/66] ✅                                  | R$ 37.99
-[W2][retry 63/66] ✅                                  | R$ 44.99
-[W2][retry 64/66] ✅                                  | R$ 20.99
-  [W2][PX] PX challenge: hold 12000ms em (684, 461) [tentativa 1/3]
-[W3][retry 65/66] ❌                                  | status=403
-  [W3][PX] PX: outro worker resolvendo — aguardando cookie...
-[W1][retry 66/66] ❌                                  | status=200
-  [W2][PX] PX: mouse.up
-  [W2][PX] PX: resolvido (botão removido)
-  [W3][PX] PX: cookie atualizado pelo outro worker, tentando fetch direto
-[W2][retry 66/66] ❌                                  | status=200
-[W3][retry 66/66] ❌                                  | status=200
+[batch] Retry automático: 144 itens que falharam...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6077ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6077ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][retry 3/144] ✅                                  | R$ 31.99
+[W1][retry 3/144] ✅                                  | R$ 55.90
+[W2][retry 5/144] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6679ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6679ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 6/144] ✅                                  | R$ 4.89
+[W3][retry 7/144] ❌                                  | status=403
+[W1][retry 8/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6744ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6744ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 9/144] ❌                                  | status=403
+[W3][retry 9/144] ❌                                  | status=403
+[W1][retry 9/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6105ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6105ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 12/144] ❌                                  | status=403
+[W3][retry 12/144] ❌                                  | status=403
+[W2][retry 12/144] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6081ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6081ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 15/144] ✅                                  | R$ 37.99
+[W2][retry 15/144] ✅                                  | R$ 15.49
+[W3][retry 15/144] ✅                                  | R$ 21.99
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: botao removido durante hold (6185ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6185ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 18/144] ✅                                  | R$ 8.29
+[W3][retry 18/144] ✅                                  | R$ 36.99
+[W2][retry 20/144] ❌                                  | status=200
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6151ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6151ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][retry 21/144] ✅                                  | R$ 17.49
+[W1][retry 22/144] ❌                                  | status=403
+[W2][retry 23/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6063ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6063ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 24/144] ✅                                  | R$ 44.99
+[W2][retry 24/144] ✅                                  | R$ 22.99
+[W3][retry 26/144] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: botao removido durante hold (6084ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6084ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][retry 27/144] ✅                                  | R$ 13.99
+[W1][retry 27/144] ✅                                  | R$ 128.99
+[W3][retry 29/144] ✅                                  | R$ 25.99
+[W2][retry 30/144] ❌                                  | status=403
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: botao removido durante hold (10226ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 10226ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 31/144] ✅                                  | R$ 20.99
+[W2][retry 31/144] ✅                                  | R$ 15.99
+[W3][retry 31/144] ✅                                  | R$ 14.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6134ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6134ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 34/144] ✅                                  | R$ 17.49
+[W2][retry 34/144] ✅                                  | R$ 33.99
+[W3][retry 34/144] ✅                                  | R$ 25.99
+[W1][retry 37/144] ✅                                  | R$ 69.90
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (7655ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 7655ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 38/144] ❌                                  | status=403
+[W3][retry 38/144] ❌                                  | status=403
+[W1][retry 38/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (8640ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 8640ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 41/144] ✅                                  | R$ 19.49
+[W3][retry 41/144] ✅                                  | R$ 26.99
+[W2][retry 41/144] ✅                                  | R$ 21.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9232ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9232ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 44/144] ❌                                  | status=403
+[W3][retry 44/144] ❌                                  | status=403
+[W2][retry 44/144] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6069ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6069ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][retry 47/144] ✅                                  | R$ 52.90
+[W1][retry 47/144] ✅                                  | R$ 35.99
+[W2][retry 47/144] ✅                                  | R$ 65.90
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (8178ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 8178ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 50/144] ✅                                  | R$ 31.99
+[W2][retry 50/144] ✅                                  | R$ 16.49
+[W3][retry 50/144] ✅                                  | R$ 36.99
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (8330ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 8330ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 53/144] ✅                                  | R$ 11.49
+[W2][retry 53/144] ✅                                  | R$ 14.99
+[W3][retry 55/144] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (9071ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 9071ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 56/144] ✅                                  | R$ 19.49
+[W3][retry 56/144] ✅                                  | R$ 16.99
+[W1][retry 56/144] ✅                                  | R$ 62.99
+[W2][retry 59/144] ✅                                  | R$ 6.79
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6135ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6135ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 60/144] ✅                                  | R$ 6.99
+[W1][retry 60/144] ✅                                  | R$ 17.49
+[W3][retry 60/144] ✅                                  | R$ 43.99
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6080ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6080ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 63/144] ❌                                  | status=403
+[W2][retry 63/144] ❌                                  | status=403
+[W3][retry 63/144] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6100ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6100ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 66/144] ❌                                  | status=403
+[W3][retry 66/144] ❌                                  | status=403
+[W2][retry 66/144] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (7129ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 7129ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 69/144] ❌                                  | status=403
+[W2][retry 69/144] ❌                                  | status=403
+[W3][retry 69/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6052ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6052ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 72/144] ✅                                  | R$ 11.99
+[W2][retry 72/144] ✅                                  | R$ 21.99
+[W3][retry 74/144] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (8582ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 8582ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 75/144] ❌                                  | status=403
+[W3][retry 75/144] ❌                                  | status=403
+[W2][retry 75/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (7395ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 7395ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 78/144] ✅                                  | R$ 17.49
+[W1][retry 78/144] ✅                                  | R$ 14.49
+[W3][retry 78/144] ✅                                  | R$ 36.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6005ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6005ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 81/144] ✅                                  | R$ 20.99
+[W3][retry 81/144] ✅                                  | R$ 43.99
+[W1][retry 83/144] ❌                                  | status=200
+[W3][retry 84/144] ✅                                  | R$ 8.49
+[W2][retry 84/144] ✅                                  | R$ 13.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6103ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6103ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 86/144] ❌                                  | status=403
+[W3][retry 86/144] ❌                                  | status=403
+[W2][retry 86/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (9210ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 9210ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][retry 89/144] ❌                                  | status=403
+[W1][retry 90/144] ❌                                  | status=403
+[W2][retry 91/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (9032ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 9032ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 92/144] ❌                                  | status=403
+[W3][retry 92/144] ❌                                  | status=403
+[W2][retry 92/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6051ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6051ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 95/144] ❌                                  | status=403
+[W2][retry 95/144] ❌                                  | status=403
+[W3][retry 95/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (7917ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 7917ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 98/144] ❌                                  | status=403
+[W1][retry 98/144] ❌                                  | status=403
+[W3][retry 98/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6156ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6156ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 101/144] ✅                                  | R$ 15.49
+[W3][retry 101/144] ✅                                  | R$ 26.99
+[W1][retry 103/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (10131ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 10131ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 104/144] ✅                                  | R$ 11.49
+[W2][retry 104/144] ✅                                  | R$ 15.49
+[W3][retry 106/144] ❌                                  | status=200
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9023ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9023ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 107/144] ❌                                  | status=403
+[W2][retry 107/144] ❌                                  | status=403
+[W3][retry 107/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6058ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6058ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 110/144] ❌                                  | status=403
+[W3][retry 110/144] ❌                                  | status=403
+[W2][retry 110/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (6130ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 6130ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 113/144] ❌                                  | status=403
+[W2][retry 113/144] ❌                                  | status=403
+[W3][retry 113/144] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (9538ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 9538ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 116/144] ❌                                  | status=403
+[W2][retry 116/144] ❌                                  | status=403
+[W3][retry 116/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (8018ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 8018ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 119/144] ✅                                  | R$ 59.90
+[W1][retry 119/144] ✅                                  | R$ 14.49
+[W3][retry 119/144] ✅                                  | R$ 14.99
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6056ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6056ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 122/144] ✅                                  | R$ 19.49
+[W3][retry 122/144] ✅                                  | R$ 59.90
+[W1][retry 122/144] ✅                                  | R$ 17.99
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (8539ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 8539ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][retry 125/144] ✅                                  | R$ 24.99
+[W1][retry 126/144] ❌                                  | status=200
+[W2][retry 126/144] ❌                                  | status=200
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W3][PX] PX: botao removido durante hold (9430ms) — release adaptativo
+  [W3][PX] PX: mouse.up apos 9430ms (botao removido)
+  [W3][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 128/144] ❌                                  | status=403
+[W3][retry 128/144] ❌                                  | status=403
+[W2][retry 128/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (8941ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 8941ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 131/144] ❌                                  | status=403
+[W2][retry 131/144] ❌                                  | status=403
+[W3][retry 131/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6005ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6005ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W2][retry 134/144] ❌                                  | status=403
+[W3][retry 134/144] ❌                                  | status=403
+[W1][retry 134/144] ❌                                  | status=403
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6022ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6022ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 137/144] ❌                                  | status=403
+[W3][retry 137/144] ❌                                  | status=403
+[W2][retry 137/144] ❌                                  | status=403
+  [W1][PX] PX: outro worker resolvendo — aguardando...
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6221ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6221ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+  [W1][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W1][retry 140/144] ✅                                  | R$ 14.49
+[W3][retry 141/144] ✅                                  | R$ 75.90
+[W2][retry 142/144] ❌                                  | status=403
+  [W3][PX] PX: outro worker resolvendo — aguardando...
+  [W2][PX] PX: outro worker resolvendo — aguardando...
+  [W1][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W1][PX] PX: botao removido durante hold (6752ms) — release adaptativo
+  [W1][PX] PX: mouse.up apos 6752ms (botao removido)
+  [W1][PX] PX: resolvido (botao removido pos mouse.up)
+  [W3][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+  [W2][PX] PX: solve concluído, tentando fetch com _px3 atualizado
+[W3][retry 143/144] ✅                                  | R$ 31.99
+[W2][retry 143/144] ✅                                  | R$ 20.99
+[W1][retry 144/144] ❌                                  | status=403
+  [W2][PX] PX challenge: hold adaptativo min=6s max=15000ms em (684, 461) [tentativa 1/3]
+  [W2][PX] PX: botao removido durante hold (6124ms) — release adaptativo
+  [W2][PX] PX: mouse.up apos 6124ms (botao removido)
+  [W2][PX] PX: resolvido (botao removido pos mouse.up)
+[W2][retry 144/144] ❌                                  | status=200
 
-[batch] retry concluída: ✅ 29 | ❌ 37 | total 66/66
+[batch] retry concluída: ✅ 63 | ❌ 81 | total 144/144
 
-[batch] 37 itens salvos em /tmp/px-batch-failed.json para análise
+[batch] 81 itens salvos em /tmp/px-batch-failed.json para análise
         Re-execute com --retry-only para tentar novamente
 
-[batch] Total enriquecidos: 178
+[batch] Total enriquecidos: 134
 [batch] Fazendo merge com products_output.json...
-[batch] Merge: 178/999 produtos com preço → /Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json
+[batch] Merge: 134/999 produtos com preço → /Users/alvaromachadoferreira/workspace/crawler-test-v2/data/products_output_enriched.json
