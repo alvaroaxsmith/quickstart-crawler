@@ -417,19 +417,23 @@ Sim. A SPA do iFood executa `window.location.reload()` internamente ao validar o
 
 ```
 src/
-  domain/                   ← tipos e regras de negócio (sem deps externas)
-  application/ports/        ← interfaces (contratos)
-  application/use-cases/    ← orquestração
-  adapters/                 ← Playwright, CSV, JSON, XLSX, checkpoint
-  infrastructure/           ← concorrência, métricas, logger, config
-  cli/index.ts              ← entry point CLI (npm start)
+  lib/                      ← núcleo (sem deps de browser)
+    input.ts                ← leitura/normalização de URLs de entrada
+    urls.ts                 ← parse de merchantId/itemId da URL
+    price.ts                ← extração e formatação de preços (BRL)
+    parser.ts               ← parse da resposta da items API do iFood
+    storage.ts              ← persistência incremental + merge final
+  adapters/fetcher/         ← integração com browser (Playwright/patchright)
+    chrome-context.service.ts  ← BrowserContext persistente anti-detecção
+    turnstile.service.ts       ← auto-solver do Cloudflare Turnstile
 
 scripts/
   run-all.mjs               ← pipeline completa (npm run crawl)
-  px-batch-parallel.mjs     ← crawler paralelo por grupo
+  px-batch-parallel.mjs     ← crawler paralelo por grupo (com retry)
+  px-batch-crawl.mjs        ← crawler batch sequencial (PX hold automático)
   renew-cf-clearance.mjs    ← renova cf_clearance via FlareSolverr
   generate-report.mjs       ← dashboard de métricas (npm run report)
-  remerge.mjs               ← re-merge manual de resultados parciais
+  remerge.mjs               ← regenera o enriched a partir do cache
   lib/
     cli.mjs                 ← parsing de args (hasFlag, getOption)
     logger.mjs              ← createLogger (info/warn/error/header)
@@ -439,10 +443,12 @@ scripts/
     xhr-capture.mjs         ← captureItemXhr (intercepção XHR do iFood)
 
 data/
-  products_output.json      ← base (título + URL + imagem, sem preço)
+  products_output.json      ← base (título + URL, sem preço)
   products_output_enriched.json  ← saída final (com preços)
-  groups/                   ← URLs segmentadas por loja
+  products_output_enriched.csv   ← mesma saída em CSV
+  groups/                   ← URLs segmentadas por loja (geradas pela pipeline)
 
-tests/unit/                 ← 113 testes unitários (Vitest)
+tests/unit/lib/             ← testes unitários do núcleo (Vitest)
+docs/adr/                   ← Architecture Decision Records
 docs/evidence/              ← logs e relatórios de execução
 ```
